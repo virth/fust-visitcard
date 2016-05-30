@@ -1,4 +1,3 @@
-<?php ?>	
-		</div>
-	</body>
+		</div>	
+	</body>	
 </html>
