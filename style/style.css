@@ -147,7 +147,7 @@ Formular Administration
 	font-family:frutigerbold, Verdana;
 	position:absolute;
     font-weight:bold;
-	top:120;
+	top:120px;
 	text-align:center;
 }
 
@@ -157,7 +157,7 @@ Formular Administration
 	font-family:frutigerbold, Verdana;
 	position:absolute;
     font-weight:bold;
-	top:135;
+	top:135px;
 	text-align:center;
 }
 
@@ -167,7 +167,7 @@ Formular Administration
 	font-family:frutigerbold, Verdana;
 	position:absolute;
     font-weight:bold;
-	top:165;
+	top:165px;
 	text-align:center;
 }
 
@@ -176,7 +176,7 @@ Formular Administration
 	width:400px;
 	font-family:frutigerbold, Verdana;
 	position:absolute;
-	top:185;
+	top:185px;
 	text-align:center;
 }
 
@@ -185,7 +185,7 @@ Formular Administration
 	width:400px;
 	font-family:frutigerbold, Verdana;
 	position:absolute;
-	top:205;
+	top:205px;
 	text-align:center;
 	letter-spacing: -1px;
 }
@@ -200,7 +200,7 @@ Formular Verkauf
 	font-size:20px;
 	width:400px;
 	font-family:frutigerbold, Verdana;
-        font-weight:bold;
+    font-weight:bold;
 	margin-top:-159px;
 	text-align:center;
 }
@@ -210,8 +210,8 @@ Formular Verkauf
 	width:400px;
 	font-family:frutigerbold, Verdana;
 	position:absolute;
-        font-weight:bold;
-	top:120;
+    font-weight:bold;
+	top:120px;
 	text-align:center;
 }
 
@@ -221,7 +221,7 @@ Formular Verkauf
 	font-family:frutigerbold, Verdana;
 	position:absolute;
     font-weight:bold;
-	top:135;
+	top:135px;
 	text-align:center;
 }
 
@@ -231,7 +231,7 @@ Formular Verkauf
 	font-family:frutigerbold, Verdana;
 	position:absolute;
         font-weight:bold;
-	top:165;
+	top:165px;
 	text-align:center;
 }
 
@@ -240,7 +240,7 @@ Formular Verkauf
 	width:400px;
 	font-family:frutigerbold, Verdana;
 	position:absolute;
-	top:180;
+	top:180px;
 	text-align:center;
 }
 
@@ -249,7 +249,7 @@ Formular Verkauf
 	width:400px;
 	font-family:frutigerbold, Verdana;
 	position:absolute;
-	top:195;
+	top:195px;
 	text-align:center;
 	letter-spacing: -1px;
 }
@@ -259,7 +259,7 @@ Formular Verkauf
 	width:400px;
 	font-family:frutigerbold, Verdana;
 	position:absolute;
-	top:210;
+	top:210px;
 	text-align:center;
 	letter-spacing: -1px;
 }
@@ -283,7 +283,7 @@ Formular Verkauf Springer
 	font-family:frutigerbold, Verdana;
 	position:absolute;
         font-weight:bold;
-	top:120;
+	top:120px;
 	text-align:center;
 }
 
@@ -293,7 +293,7 @@ Formular Verkauf Springer
 	font-family:frutigerbold, Verdana;
 	position:absolute;
     font-weight:bold;
-	top:135;
+	top:135px;
 	text-align:center;
 }
 
@@ -303,7 +303,7 @@ Formular Verkauf Springer
 	font-family:frutigerbold, Verdana;
 	position:absolute;
         font-weight:bold;
-	top:158;
+	top:158px;
 	text-align:center;
 }
 
@@ -313,7 +313,7 @@ Formular Verkauf Springer
 	width:400px;
 	font-family:frutigerbold, Verdana;
 	position:absolute;
-	top:173;
+	top:173px;
 	text-align:center;
 	letter-spacing: -1px;
 }
@@ -325,7 +325,7 @@ Formular Verkauf Springer
 	font-family:frutigerbold, Verdana;
 	position:absolute;
         font-weight:bold;
-	top:198;
+	top:198px;
 	text-align:center;
 }
 
@@ -335,7 +335,7 @@ Formular Verkauf Springer
 	width:400px;
 	font-family:frutigerbold, Verdana;
 	position:absolute;
-	top:213;
+	top:213px;
 	text-align:center;
 	letter-spacing: -1px;
 }
@@ -359,7 +359,7 @@ Formular Monteur
 	font-family:frutigerbold, Verdana;
 	position:absolute;
         font-weight:bold;
-	top:120;
+	top:120px;
 	text-align:center;
 }
 
@@ -369,7 +369,7 @@ Formular Monteur
 	font-family:frutigerbold, Verdana;
 	position:absolute;
     font-weight:bold;
-	top:135;
+	top:135px;
 	text-align:center;
 }
 
@@ -379,7 +379,7 @@ Formular Monteur
 	font-family:frutigerbold, Verdana;
 	position:absolute;
     font-weight:bold;
-	top:165;
+	top:165px;
 	text-align:center;
 }
 
@@ -396,7 +396,7 @@ Formular KueBa
 	width:400px;
 	font-family:frutigerbold, Verdana;
         font-weight:bold;
-	top:75;
+	top:75px;
 	left:150;
 }
 	
@@ -406,7 +406,7 @@ Formular KueBa
 	font-family:frutigerbold, Verdana;
 	position:absolute;
         font-weight:bold;
-	top:98;
+	top:98px;
 	left:150;
 	
 }
@@ -417,8 +417,8 @@ Formular KueBa
 	font-family:frutigerbold, Verdana;
 	position:absolute;
     font-weight:bold;
-	left:150;
-	top:113;
+	left:150px;
+	top:113px;
 	
 }
 
@@ -437,8 +437,8 @@ Formular KueBa
 	width:400px;
 	font-family:frutigerbold, Verdana;
 	position:absolute;
-	top:130;
-	left: 150;
+	top:130px;
+	left: 150px;
     letter-spacing: -1px;
 }
 
@@ -447,7 +447,7 @@ Formular KueBa
 	width:400px;
 	font-family:frutigerbold, Verdana;
 	position:absolute;
-	left: 50;
+	left: 50px;
     letter-spacing: -1px;
 
 }
