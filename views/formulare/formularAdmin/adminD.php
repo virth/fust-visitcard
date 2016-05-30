@@ -66,7 +66,7 @@ if (strpos($mail,'@') != false)
 	{
 		$m ="";
 		if ($mobile != "")
-			$m = "Mobile ".$mobile.' ·';
+			$m = "Mobile ".$mobile.' ï¿½';
 			
 		$filename = $pdfGenerator->generatePdf
 		(
@@ -81,12 +81,12 @@ if (strpos($mail,'@') != false)
 				$street, //4
 				$zip, //5
 				$mail.'@fust.ch', //6
-				$m.' Telefon '.$phone.' · Fax '.$fax //7
+				$m.' Telefon '.$phone.' ï¿½ Fax '.$fax //7
 			), 
 			$filialnr, 
 			$anz
 		);
-		$message = 'Besten Dank für Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
+		$message = 'Besten Dank fï¿½r Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
 	}
 		
 	include_once('views/header.php');
@@ -96,7 +96,7 @@ if (strpos($mail,'@') != false)
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("Sind Sie sicher dass Sie bestellen möchten? Haben Sie alle Texte nochmals überprüft?");
+var agree=confirm("Sind Sie sicher dass Sie bestellen mï¿½chten? Haben Sie alle Texte nochmals ï¿½berprï¿½ft?");
 if (agree)
 	return true ;
 else
@@ -112,7 +112,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(wird nur für interne Zwecke benötigt)
+									(wird nur fï¿½r interne Zwecke benï¿½tigt)
 								</span>
 							</td>
 						</tr>
@@ -184,12 +184,12 @@ else
 				<?php echo $message; ?>
 			<div class="vorschaufenster" >
 				<img src="resource/template/vorlagen/Administration/VK_dt_Administration_leer.jpg" width="400px" />
-				<div class="view-formularAdmin-Vorschau-Name"><?php echo $vorname; echo ' '; echo $name; ?></div>
-				<div class="view-formularAdmin-Vorschau-Function1"><?php echo $function1; ?></div>
-				<div class="view-formularAdmin-Vorschau-Function2"><?php echo $function2; ?></div>
-				<div class="view-formularAdmin-Vorschau-AdressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
-				<div class="view-formularAdmin-Vorschau-Mail"><?php echo $mail; echo $mailEnding; ?></div>
-				<div class="view-formularAdmin-Vorschau-Nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' · '; } if ($phone != "") { echo ' Telefon '; echo $phone; } if ($fax != "") {  echo ' · Fax '; echo $fax; } ?></div>
+				<div class="view-formularAdmin-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
+				<div class="view-formularAdmin-vorschau-function1"><?php echo $function1; ?></div>
+				<div class="view-formularAdmin-Vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularAdmin-Vorschau-adressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
+				<div class="view-formularAdmin-Vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
+				<div class="view-formularAdmin-Vorschau-nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' Â· '; } if ($phone != "") { echo ' Telefon '; echo $phone; } if ($fax != "") {  echo ' ï¿½ Fax '; echo $fax; } ?></div>
 			</div>
 		</div>
 	</body>

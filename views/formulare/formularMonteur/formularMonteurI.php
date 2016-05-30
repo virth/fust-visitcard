@@ -83,7 +83,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(per scopi interni è necessario)
+									(per scopi interni ï¿½ necessario)
 								</span>
 							</td>
 						</tr>
@@ -123,7 +123,7 @@ else
 							</td>
 						</tr>
 						<tr>
-							<td align="right">Quantità:</td>
+							<td align="right">Quantitï¿½:</td>
 							<td>
 								<select name="anz" size="1">
 	      							<option>100</option>
@@ -138,10 +138,10 @@ else
 				<?php echo $message; ?>
 			<div class="vorschaufenster" >
 				<img src="resource/template/vorlagen/Monteur/VK_ital_Monteur_leer.jpg" width="400px" />
-				<div class="view-formularMonteur-Vorschau-Name"><?php echo $vorname; echo ' '; echo $name; ?></div>
-				<div class="view-formularMonteur-Vorschau-Function1"><?php echo $function1; echo ' '; echo $sparte; ?></div>
-				<div class="view-formularMonteur-Vorschau-Function2"><?php echo $function2; ?></div>
-				<div class="view-formularMonteur-Vorschau-Region"><?php echo 'Region '; echo $region; ?></div>
+				<div class="view-formularMonteur-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
+				<div class="view-formularMonteur-vorschau-function1"><?php echo $function1; echo ' '; echo $sparte; ?></div>
+				<div class="view-formularMonteur-vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularMonteur-vorschau-region"><?php echo 'Region '; echo $region; ?></div>
 			</div>
 		</div>
 	</body>

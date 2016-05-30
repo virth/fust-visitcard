@@ -55,7 +55,7 @@
 			$filialnr, 
 			$anz
 		);
-		$message = 'Besten Dank für Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
+		$message = 'Besten Dank fï¿½r Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
 	}
 			
 	include_once('views/header.php');
@@ -65,7 +65,7 @@
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("Sind Sie sicher dass Sie bestellen möchten? Haben Sie alle Texte nochmals überprüft?");
+var agree=confirm("Sind Sie sicher dass Sie bestellen mï¿½chten? Haben Sie alle Texte nochmals ï¿½berprï¿½ft?");
 if (agree)
 	return true ;
 else
@@ -81,7 +81,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(wird nur für interne Zwecke benötigt)
+									(wird nur fï¿½r interne Zwecke benï¿½tigt)
 								</span>
 							</td>
 						</tr>
@@ -136,10 +136,10 @@ else
 				<?php echo $message; ?>
 			<div class="vorschaufenster" >
 				<img src="resource/template/vorlagen/Monteur/VK_dt_Monteur_leer.jpg" width="400px" />
-				<div class="view-formularMonteur-Vorschau-Name"><?php echo $vorname; echo ' '; echo $name; ?></div>
-				<div class="view-formularMonteur-Vorschau-Function1"><?php echo $function1; echo ' '; echo $sparte; ?></div>
-				<div class="view-formularMonteur-Vorschau-Function2"><?php echo $function2; ?></div>
-				<div class="view-formularMonteur-Vorschau-Region"><?php echo 'Region '; echo $region; ?></div>
+				<div class="view-formularMonteur-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
+				<div class="view-formularMonteur-vorschau-function1"><?php echo $function1; echo ' '; echo $sparte; ?></div>
+				<div class="view-formularMonteur-vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularMonteur-vorschau-region"><?php echo 'Region '; echo $region; ?></div>
 			</div>
 		</div>
 	</body>

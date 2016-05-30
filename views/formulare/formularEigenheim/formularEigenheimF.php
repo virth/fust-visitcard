@@ -43,7 +43,7 @@
 {
 		$mail = $pdfGenerator->customspecialchars(trim($_POST['mail']));
 	if (strpos($mail,'@') != false)
-	$Errmessage =	 "<script type='text/javascript'>alert ('E-mail doit être entré sans @fust.ch');</script>";
+	$Errmessage =	 "<script type='text/javascript'>alert ('E-mail doit ï¿½tre entrï¿½ sans @fust.ch');</script>";
 }
 	if (isset($_POST['mobile'])) 
 		$mobile = $pdfGenerator->customspecialchars(trim($_POST['mobile']));
@@ -52,10 +52,10 @@
 		$phone = $pdfGenerator->customspecialchars(trim($_POST['phone']));
 	    $array = str_split($phone);
 		if (count($array) < 13)
-			$Errmessage = "<span class='red' style=\"font-size:10px;\">Le n° de téléphone n’a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
+			$Errmessage = "<span class='red' style=\"font-size:10px;\">Le nï¿½ de tï¿½lï¿½phone nï¿½a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<span class='red' style=\"font-size:10px;\">Le n° de téléphone n’a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
+				$Errmessage = "<span class='red' style=\"font-size:10px;\">Le nï¿½ de tï¿½lï¿½phone nï¿½a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
 	}
 	if (isset($_POST['fax']))
 		$fax = $pdfGenerator->customspecialchars(trim($_POST['fax']));
@@ -75,7 +75,7 @@
 				$street, //4
 				$zip, //5
 				$mail.'@fust.ch', //6
-				'Mobile '.$mobile.' · Téléphone '.$phone.' · Fax '.$fax //7
+				'Mobile '.$mobile.' ï¿½ Tï¿½lï¿½phone '.$phone.' ï¿½ Fax '.$fax //7
 			), 
 			$filialnr, 
 			$anz
@@ -89,7 +89,7 @@
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("Êtes-vous sure, que vous voulez comander? Avez vous controllé tous les textes?");
+var agree=confirm("ï¿½tes-vous sure, que vous voulez comander? Avez vous controllï¿½ tous les textes?");
 if (agree)
 	return true ;
 else
@@ -104,7 +104,7 @@ else
 				<form action="index.php?site=formularEigenheim&language=f" method="post">
 					<table class="formularTabelle">	
 						<tr>
-						  <td align="right">Numéro filiale.:</td>
+						  <td align="right">Numï¿½ro filiale.:</td>
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>"> 
 								<span class="tabellenKommentar" >
@@ -117,7 +117,7 @@ else
 						  <td><input name="name" type="text" size="30" maxlength="20" value="<?php echo $name;?>"></td>
 						</tr>
 						<tr>
-						  <td align="right">Prénom:</td>
+						  <td align="right">Prï¿½nom:</td>
 						  <td><input name="vorname" type="text" size="30" maxlength="20" value="<?php echo $vorname;?>"></td>
 						</tr>
 						<tr>
@@ -147,7 +147,7 @@ else
 						  <td><input name="mobile" type="text" size="30" maxlength="36" value="<?php echo $mobile;?>"></td>
 						</tr>
 						<tr>
-						  <td align="right">Téléphone:</td>
+						  <td align="right">Tï¿½lï¿½phone:</td>
 						  <td><input name="phone" type="text" size="30" maxlength="36" value="<?php echo $phone;?>"><?php echo $Errmessage; ?></td>
 						</tr>
 						<tr>
@@ -181,12 +181,12 @@ else
 				<?php echo $message; ?>
 			<div class="vorschaufenster" >
 				<img src="resource/template/vorlagen/Umbau_Neubau/VK_franz_Umbau_Neubau_leer.jpg" width="400px" />
-				<div class="view-formularAdmin-Vorschau-Name"><?php echo $vorname; echo ' '; echo $name; ?></div>
-				<div class="view-formularAdmin-Vorschau-Function1"><?php echo $function1; ?></div>
-				<div class="view-formularAdmin-Vorschau-Function2"><?php echo $function2; ?></div>
-				<div class="view-formularAdmin-Vorschau-AdressZeile"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
-				<div class="view-formularAdmin-Vorschau-Mail"><?php echo $mail; echo $mailEnding; ?></div>
-				<div class="view-formularAdmin-Vorschau-Nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' · '; } if ($phone != "") { echo ' Téléphone '; echo $phone; } if ($fax != "") {  echo ' · Fax '; echo $fax; } ?></div>
+				<div class="view-formularAdmin-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
+				<div class="view-formularAdmin-vorschau-function1"><?php echo $function1; ?></div>
+				<div class="view-formularAdmin-vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularAdmin-vorschau-adressZeile"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
+				<div class="view-formularAdmin-vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
+				<div class="view-formularAdmin-vorschau-nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' Â· '; } if ($phone != "") { echo ' Tï¿½lï¿½phone '; echo $phone; } if ($fax != "") {  echo ' ï¿½ Fax '; echo $fax; } ?></div>
 			</div>
 		</div>
 	</body>

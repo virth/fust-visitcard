@@ -63,7 +63,7 @@
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("Êtes-vous sure, que vous voulez comander? Avez vous controllé tous les textes?");
+var agree=confirm("ï¿½tes-vous sure, que vous voulez comander? Avez vous controllï¿½ tous les textes?");
 if (agree)
 	return true ;
 else
@@ -82,7 +82,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(per scopi interni è necessario)
+									(per scopi interni ï¿½ necessario)
 								</span>
 							</td>
 						</tr>
@@ -91,7 +91,7 @@ else
 						  <td><input name="name" type="text" size="30" maxlength="20" value="<?php echo $name;?>"></td>
 						</tr>
 						<tr>
-						  <td align="right">Prénom:</td>
+						  <td align="right">Prï¿½nom:</td>
 						  <td><input name="vorname" type="text" size="30" maxlength="20" value="<?php echo $vorname;?>"></td>
 						</tr>
 						<tr>
@@ -137,10 +137,10 @@ else
 				<?php echo $message; ?>
 			<div class="vorschaufenster" >
 				<img src="resource/template/vorlagen/Monteur/VK_franz_Monteur_leer.jpg" width="400px" />
-				<div class="view-formularMonteur-Vorschau-Name"><?php echo $vorname; echo ' '; echo $name; ?></div>
-				<div class="view-formularMonteur-Vorschau-Function1"><?php echo $function1; echo ' '; echo $sparte; ?></div>
-				<div class="view-formularMonteur-Vorschau-Function2"><?php echo $function2; ?></div>
-				<div class="view-formularMonteur-Vorschau-Region"><?php echo 'Région '; echo $region; ?></div>
+				<div class="view-formularMonteur-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
+				<div class="view-formularMonteur-vorschau-function1"><?php echo $function1; echo ' '; echo $sparte; ?></div>
+				<div class="view-formularMonteur-vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularMonteur-vorschau-region"><?php echo 'Rï¿½gion '; echo $region; ?></div>
 			</div>
 		</div>
 	</body>

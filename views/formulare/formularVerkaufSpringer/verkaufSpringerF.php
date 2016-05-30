@@ -52,17 +52,17 @@
 {
 		$mail = $pdfGenerator->customspecialchars(trim($_POST['mail']));
 	if (strpos($mail,'@') != false)
-	$Errmessage =	 "<script type='text/javascript'>alert ('E-mail doit être entré sans @fust.ch');</script>";
+	$Errmessage =	 "<script type='text/javascript'>alert ('E-mail doit ï¿½tre entrï¿½ sans @fust.ch');</script>";
 }	
 	if (isset($_POST['phone']))
 	{
 		$phone = $pdfGenerator->customspecialchars(trim($_POST['phone']));
 	    $array = str_split($phone);
 		if (count($array) < 13)
-			$Errmessage = "<span class='red' style=\"font-size:10px;\">Le n° de téléphone n’a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
+			$Errmessage = "<span class='red' style=\"font-size:10px;\">Le nï¿½ de tï¿½lï¿½phone nï¿½a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<span class='red' style=\"font-size:10px;\">Le n° de téléphone n’a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
+				$Errmessage = "<span class='red' style=\"font-size:10px;\">Le nï¿½ de tï¿½lï¿½phone nï¿½a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
 	}
 
 	if (isset($_POST['fax']))
@@ -77,17 +77,17 @@
 {
 		$mailF2 = $pdfGenerator->customspecialchars(trim($_POST['mailF2']));
 	if (strpos($mailF2 ,'@') != false)
-	$Errmessage =	 "<script type='text/javascript'>alert ('E-mail doit être entré sans @fust.ch');</script>";
+	$Errmessage =	 "<script type='text/javascript'>alert ('E-mail doit ï¿½tre entrï¿½ sans @fust.ch');</script>";
 }	
 	if (isset($_POST['phoneF2']))
 	{
 		$phoneF2 = $pdfGenerator->customspecialchars(trim($_POST['phoneF2']));
 	    $array = str_split($phoneF2);
 		if (count($array) < 13)
-			$ErrmessageF2 = "<span class='red' style=\"font-size:10px;\">Le n° de téléphone n’a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
+			$ErrmessageF2 = "<span class='red' style=\"font-size:10px;\">Le nï¿½ de tï¿½lï¿½phone nï¿½a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$ErrmessageF2 = "<span class='red' style=\"font-size:10px;\">Le n° de téléphone n’a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
+				$ErrmessageF2 = "<span class='red' style=\"font-size:10px;\">Le nï¿½ de tï¿½lï¿½phone nï¿½a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
 	}
 
 	if (isset($_POST['faxF2']))
@@ -107,11 +107,11 @@
 				'Ing. dipl. Fust SA ',  //3
 				$street,  //4
 				$zip,  //5
-				$mail.'@fust.ch'.' · '.'Téléphone '.$phone.' · Fax '.$fax, //6
+				$mail.'@fust.ch'.' ï¿½ '.'Tï¿½lï¿½phone '.$phone.' ï¿½ Fax '.$fax, //6
 				'Ing. dipl. Fust SA ', //7
 				$streetF2, //8
 				$zipF2, //9
-				$mailF2.'@fust.ch'.' · '.'Téléphone '.$phoneF2.' · Fax '.$faxF2 //10
+				$mailF2.'@fust.ch'.' ï¿½ '.'Tï¿½lï¿½phone '.$phoneF2.' ï¿½ Fax '.$faxF2 //10
 			), 
 			$filialnr, 
 			$anz
@@ -125,7 +125,7 @@ include_once('views/header.php');
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("Êtes-vous sure, que vous voulez comander? Avez vous controllé tous les textes?");
+var agree=confirm("ï¿½tes-vous sure, que vous voulez comander? Avez vous controllï¿½ tous les textes?");
 if (agree)
 	return true ;
 else
@@ -140,7 +140,7 @@ else
 				<form action="index.php?site=formularVerkaufSpringer&language=f" method="post">
 					<table class="formularTabelle">	
 						<tr>
-						  <td align="right">Numéro filiale:</td>
+						  <td align="right">Numï¿½ro filiale:</td>
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10" value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
@@ -153,19 +153,19 @@ else
 						  <td><input name="name" type="text" size="30" maxlength="20" value="<?php echo $name;?>"></td>
 						</tr>
 						<tr>
-						  <td align="right">Prénom:</td>
+						  <td align="right">Prï¿½nom:</td>
 						  <td><input name="vorname" type="text" size="30" maxlength="20" value="<?php echo $vorname;?>"></td>
 						</tr>
 						<tr>
 						  <td align="right">Fonction ligne 1:</td>
 						  <td>
 							<select name="function1" type="text" size="1" maxlength="36" value="<?php echo $function1;?>">
-								<option <?php if ($function1 == "Conseillère de vente")  { echo 'selected'; } ?>>Conseillère de vente</option>
+								<option <?php if ($function1 == "Conseillï¿½re de vente")  { echo 'selected'; } ?>>Conseillï¿½re de vente</option>
 								<option <?php if ($function1 == "Conseiller de vente")  { echo 'selected'; } ?>>Conseiller de vente</option>
-								<option <?php if ($function1 == "Chef du département")  { echo 'selected'; } ?>>Chef du département</option>
+								<option <?php if ($function1 == "Chef du dï¿½partement")  { echo 'selected'; } ?>>Chef du dï¿½partement</option>
 								<option <?php if ($function1 == "Chef de succursale")  { echo 'selected'; } ?>>Chef de succursale</option>
-								<option <?php if ($function1 == "Chef de marché")  { echo 'selected'; } ?>>Chef de marché</option>
-								<option <?php if ($function1 == "Chef de vente régional")  { echo 'selected'; } ?>>Chef de vente régional</option>
+								<option <?php if ($function1 == "Chef de marchï¿½")  { echo 'selected'; } ?>>Chef de marchï¿½</option>
+								<option <?php if ($function1 == "Chef de vente rï¿½gional")  { echo 'selected'; } ?>>Chef de vente rï¿½gional</option>
 								<option <?php if ($function1 == "Chef de vente")  { echo 'selected'; } ?>>Chef de vente</option>
 								<option <?php if ($function1 == "Technicien PC")  { echo 'selected'; } ?>>Technicien PC</option>
 								<option <?php if ($function1 == "Personnes en formation")  { echo 'selected'; } ?>>Personnes en formation</option>
@@ -180,9 +180,9 @@ else
 						  <td align="right">Ressort:</td>
 						   <td>
 						<select name="sparte" type="text" size="1" maxlength="36" value="<?php echo $sparte;?>">
-								<option <?php if ($sparte == "électroménager")  { echo 'selected'; } ?>>électroménager</option>
+								<option <?php if ($sparte == "ï¿½lectromï¿½nager")  { echo 'selected'; } ?>>ï¿½lectromï¿½nager</option>
 								<option <?php if ($sparte == "multimedia")  { echo 'selected'; } ?>>multimedia</option>
-								<option <?php if ($sparte == "électroménager/multimedia")  { echo 'selected'; } ?>>électroménager/multimedia</option>
+								<option <?php if ($sparte == "ï¿½lectromï¿½nager/multimedia")  { echo 'selected'; } ?>>ï¿½lectromï¿½nager/multimedia</option>
 								<option <?php if ($sparte == "photo")  { echo 'selected'; } ?>>photo</option>
 							</select>
 						  </td>
@@ -202,7 +202,7 @@ else
 							<?php echo $mailEnding; ?>
 						</td>
 						<tr>
-						  <td align="right">Téléphone:</td>
+						  <td align="right">Tï¿½lï¿½phone:</td>
 						  <td><input name="phone" type="text" size="30" maxlength="36" value="<?php echo $phone;?>"><?php echo $Errmessage; ?></td>
 						</tr>
 						<tr>
@@ -229,7 +229,7 @@ else
 						  </td>
 						</tr>
 						<tr>
-						  <td align="right">Téléphone:</td>
+						  <td align="right">Tï¿½lï¿½phone:</td>
 						  <td><input name="phoneF2" type="text" size="30" maxlength="36" value="<?php echo $phoneF2;?>"><?php echo $ErrmessageF2; ?></td>
 						</tr>
 						<tr>
@@ -263,49 +263,49 @@ else
 			    <?php echo $message; ?>
 			<div class="vorschaufenster" >
 				<img src="resource/template/vorlagen/Verkauf/VK_franz_Verkauf_VS_leer.jpg" width="400px" />
-				<div class="view-formularVerkaufSpringer-Vorschau-Name"><?php echo $vorname; echo ' '; echo $name; ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-Function1"><?php echo $function1; echo ' '; echo $sparte ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-AdressZeile" <?php  if((strlen($street) + strlen($zip)) > 32) { echo 'style=font-size:9px;'; } ?>><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-Function2"><?php echo $function2; ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-Nummern">
+				<div class="view-formularVerkaufSpringer-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-function1"><?php echo $function1; echo ' '; echo $sparte ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-adressZeile" <?php  if((strlen($street) + strlen($zip)) > 32) { echo 'style=font-size:9px;'; } ?>><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-nummern">
 					<?php 
 					if ($mail != "") 
 					{ 
 						echo $mail; 
 						echo $mailEnding; 
-						echo " ·"; 
+						echo " Â·"; 
 					}
 					if ($phone != "") 
 					{ 
-						echo ' Téléphone '; 
+						echo ' TÃ©lÃ©phone '; 
 						echo $phone; 
 					} 
 					if ($fax != "") 
 					{  
-						echo ' · Fax '; 
+						echo ' Â· Fax '; 
 						echo $fax; 
 					} 
 					?>
 				</div>
-				<div class="view-formularVerkaufSpringer-Vorschau-AdressZeileF2"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $streetF2; echo ' <span class="orange">|</span> '; echo $zipF2; ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-NummernF2">
+				<div class="view-formularVerkaufSpringer-vorschau-adressZeileF2"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $streetF2; echo ' <span class="orange">|</span> '; echo $zipF2; ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-nummernF2">
 					<?php 
 					if ($mailF2 != "") 
 					{ 
 						echo $mailF2; 
 						echo $mailEnding; 
-						echo " ·"; 
+						echo " Â·"; 
 					}
 					
 					if ($phoneF2 != "") 
 					{ 
-						echo ' Téléphone '; 
+						echo ' TÃ©lÃ©phone '; 
 						echo $phoneF2; 
 					} 
 					
 					if ($faxF2 != "") 
 					{  
-						echo ' · Fax '; 
+						echo ' Â· Fax '; 
 						echo $faxF2; 
 					} 
 					?>

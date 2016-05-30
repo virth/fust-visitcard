@@ -74,8 +74,8 @@ if (isset($_POST['order']) && $Errmessage == "")
 	$freierWochentag = "";
 	if ($freierTag != "")
 		$freierWochentag = "Freier Wochentag: ".$freierTag;
-	$filename = $filename = $pdfGenerator->generatePdf("verkauf", "D", array($vorname.' '.$name, $function1.' '.$sparte, $function2, 'Dipl.Ing.Fust AG ', $street, $zip, $mail.'@fust.ch', 'Telefon '.$phone.' · Fax '.$fax, $freierWochentag), $filialnr, $anz);
-	$message = 'Besten Dank für Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
+	$filename = $filename = $pdfGenerator->generatePdf("verkauf", "D", array($vorname.' '.$name, $function1.' '.$sparte, $function2, 'Dipl.Ing.Fust AG ', $street, $zip, $mail.'@fust.ch', 'Telefon '.$phone.' ï¿½ Fax '.$fax, $freierWochentag), $filialnr, $anz);
+	$message = 'Besten Dank fï¿½r Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
 }
 
 
@@ -85,7 +85,7 @@ include_once('views/header.php');
 		<script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("Sind Sie sicher dass Sie bestellen möchten? Haben Sie alle Texte nochmals überprüft?");
+var agree=confirm("Sind Sie sicher dass Sie bestellen mï¿½chten? Haben Sie alle Texte nochmals ï¿½berprï¿½ft?");
 if (agree)
 	return true ;
 else
@@ -103,7 +103,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="36" value="<?php echo $filialnr;?>">
 								<span class="tabellenKommentar" >
-									(wird nur für interne Zwecke benötigt)
+									(wird nur fï¿½r interne Zwecke benï¿½tigt)
 								</span>
 							</td>
 						</tr>
@@ -199,13 +199,13 @@ else
 				<?php echo $message; ?>
 			<div class="vorschaufenster" >
 				<img src="resource/template/vorlagen/Verkauf/VK_dt_Verkauf_VS_leer.jpg" width="400px" />
-				<div class="view-formularVerkauf-Vorschau-Name"><?php echo $vorname; echo ' '; echo $name; ?></div>
-				<div class="view-formularVerkauf-Vorschau-Function1"><?php echo $function1; echo ' '; echo $sparte ?></div>
-				<div class="view-formularVerkauf-Vorschau-Function2"><?php echo $function2; ?></div>
-				<div class="view-formularVerkauf-Vorschau-AdressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
-				<div class="view-formularVerkauf-Vorschau-Mail"><?php echo $mail; echo $mailEnding; ?></div>
-				<div class="view-formularVerkauf-Vorschau-Nummern"><?php if ($phone != "") { echo ' Telefon '; echo $phone; } if ($fax != "") {  echo ' · Fax '; echo $fax; } ?></div>
-				<div class="view-formularVerkauf-Vorschau-FreierWochentag"><?php if ($freierTag != "") { echo 'Freier Wochentag: '; echo $freierTag; } ?></div>
+				<div class="view-formularVerkauf-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
+				<div class="view-formularVerkauf-vorschau-function1"><?php echo $function1; echo ' '; echo $sparte ?></div>
+				<div class="view-formularVerkauf-vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularVerkauf-vorschau-adressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
+				<div class="view-formularVerkauf-vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
+				<div class="view-formularVerkauf-vorschau-nummern"><?php if ($phone != "") { echo ' Telefon '; echo $phone; } if ($fax != "") {  echo ' Â· Fax '; echo $fax; } ?></div>
+				<div class="view-formularVerkauf-vorschau-freierWochentag"><?php if ($freierTag != "") { echo 'Freier Wochentag: '; echo $freierTag; } ?></div>
 			</div>
 			<div class="vorschaufenster-rueckseite">
 				<img src="resource/template/img/Visit_Verkauf_RS_de.jpg" width="400px" />

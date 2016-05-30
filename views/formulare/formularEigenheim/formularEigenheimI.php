@@ -52,10 +52,10 @@
 		$phone = $pdfGenerator->customspecialchars(trim($_POST['phone']));
 	    $array = str_split($phone);
 		if (count($array) < 13)
-			$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non è corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+			$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non ï¿½ corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non è corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+				$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non ï¿½ corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 	}
 	if (isset($_POST['fax']))
 		$fax = $pdfGenerator->customspecialchars(trim($_POST['fax']));
@@ -75,7 +75,7 @@
 				$street, //4
 				$zip, //5
 				$mail.'@fust.ch', //6
-				'Mobile '.$mobile.' · Telefono '.$phone.' · Fax '.$fax //7
+				'Mobile '.$mobile.' ï¿½ Telefono '.$phone.' ï¿½ Fax '.$fax //7
 			), 
 			$filialnr, 
 			$anz
@@ -107,7 +107,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									 (per scopi interni è necessario)
+									 (per scopi interni ï¿½ necessario)
 								</span>
 							</td>
 						</tr>
@@ -165,7 +165,7 @@ else
 							</td>
 						</tr>
 						<tr>
-							<td align="right">Quantità:</td>
+							<td align="right">Quantitï¿½:</td>
 							<td>
 								<select name="anz" size="1">
 	      							<option>100</option>
@@ -180,12 +180,12 @@ else
 				<?php echo $message; ?>
 			<div class="vorschaufenster" >
 				<img src="resource/template/vorlagen/Umbau_Neubau/VK_ital_Umbau_Neubau_leer.jpg" width="400px" />
-				<div class="view-formularAdmin-Vorschau-Name"><?php echo $vorname; echo ' '; echo $name; ?></div>
-				<div class="view-formularAdmin-Vorschau-Function1"><?php echo $function1; ?></div>
-				<div class="view-formularAdmin-Vorschau-Function2"><?php echo $function2; ?></div>
-				<div class="view-formularAdmin-Vorschau-AdressZeile"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
-				<div class="view-formularAdmin-Vorschau-Mail"><?php echo $mail; echo $mailEnding; ?></div>
-				<div class="view-formularAdmin-Vorschau-Nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' · '; } if ($phone != "") { echo ' Telefono '; echo $phone; } if ($fax != "") {  echo ' · Fax '; echo $fax; } ?></div>
+				<div class="view-formularAdmin-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
+				<div class="view-formularAdmin-vorschau-function1"><?php echo $function1; ?></div>
+				<div class="view-formularAdmin-vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularAdmin-vorschau-adressZeile"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
+				<div class="view-formularAdmin-vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
+				<div class="view-formularAdmin-vorschau-nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' Â· '; } if ($phone != "") { echo ' Telefono '; echo $phone; } if ($fax != "") {  echo ' ï¿½ Fax '; echo $fax; } ?></div>
 			</div>
 		</div>
 	</body>

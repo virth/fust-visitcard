@@ -53,30 +53,30 @@
 		$mobile = $pdfGenerator->customspecialchars(trim($_POST['mobile']));
 	    $array = str_split($mobile);
 		if (count($array) < 13 && count($array) > 1)
-			$Errmessage = "<script type='text/javascript'>alert ('Il nummero di mobil non è corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
+			$Errmessage = "<script type='text/javascript'>alert ('Il nummero di mobil non ï¿½ corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
 		else if (count($array) > 1)
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<script type='text/javascript'>alert ('Il nummero di mobil non è corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
+				$Errmessage = "<script type='text/javascript'>alert ('Il nummero di mobil non ï¿½ corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
 	}
 	if (isset($_POST['phone']))
 	{
 		$phone = $pdfGenerator->customspecialchars(trim($_POST['phone']));
 	    $array = str_split($phone);
 		if (count($array) < 13)
-			$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non è corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+			$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non ï¿½ corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non è corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+				$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non ï¿½ corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 	}
 	if (isset($_POST['fax']))
 	{
 		$fax = $pdfGenerator->customspecialchars(trim($_POST['fax']));
 	    $array = str_split($fax);
 		if (count($array) < 13 && count($array) > 1)
-			$Errmessage = "<script type='text/javascript'>alert ('Il nummero di fax non è corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
+			$Errmessage = "<script type='text/javascript'>alert ('Il nummero di fax non ï¿½ corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
 		else if (count($array) > 1)
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<script type='text/javascript'>alert ('Il nummero di fax non è corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
+				$Errmessage = "<script type='text/javascript'>alert ('Il nummero di fax non ï¿½ corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
 	}
 	
 	if (isset($_POST['order']))
@@ -145,7 +145,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>"> 
 								<span class="tabellenKommentar" >
-									 (per scopi interni è necessario)
+									 (per scopi interni ï¿½ necessario)
 								</span>
 							</td>
 						</tr>
@@ -217,7 +217,7 @@ else
 						<tr>
 							<td align="right">Foto Upload (max 10mb):</td>		
 							<td><input name="thefile" type="file" size="30" maxlength="36"></td>
-							<td>(Abito scuro, cravatta. L’immagine deve essere prima verificata dall’ RVL.)</td>
+							<td>(Abito scuro, cravatta. Lï¿½immagine deve essere prima verificata dallï¿½ RVL.)</td>
 						</tr>
 						<tr>
 							<td align="right">ordine:</td>
@@ -234,33 +234,33 @@ else
 				<?php echo $message; ?>
 			<div class="vorschaufenster" >
 				<img src="resource/template/vorlagen/KueBa/VK_ital_KueBa_VS_leer.jpg" width="400px" />
-				<div class="view-formularKueBa-Vorschau-Name"><?php echo $vorname; echo ' '; echo $name; ?></div>
-				<div class="view-formularKueBa-Vorschau-Function1"><?php echo $function1; echo ' '; echo $sparte ?></div>
-				<div class="view-formularKueBa-Vorschau-Function2"><?php echo $function2; ?></div>
-				<div class="view-formularKueBa-Vorschau-AdressZeile"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
-				<div class="view-formularKueBa-Vorschau-Nummern">
+				<div class="view-formularKueBa-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
+				<div class="view-formularKueBa-vorschau-function1"><?php echo $function1; echo ' '; echo $sparte ?></div>
+				<div class="view-formularKueBa-vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularKueBa-vorschau-adressZeile"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
+				<div class="view-formularKueBa-vorschau-nummern">
 					<?php 
 					if ($phone != "") 
 					{ 
-						echo 'Telefono: <span class="view-formularKueBa-Nummer-Vorschau">'; 
+						echo 'Telefono: <span class="view-formularKueBa-nummer-vorschau">'; 
 						echo $phone; 
 						echo '</span><br />'; 
 					} 
 					if ($mobile != "") 
 					{  
-						echo 'Mobile: <span class="view-formularKueBa-Nummer-Vorschau">'; 
+						echo 'Mobile: <span class="view-formularKueBa-nummer-vorschau">'; 
 						echo $mobile; 
 						echo '</span><br />'; 
 					}  
 					if ($fax != "") 
 					{  
-						echo 'Fax: <span class="view-formularKueBa-Nummer-Vorschau">'; 
+						echo 'Fax: <span class="view-formularKueBa-nummer-vorschau">'; 
 						echo $fax; 
 						echo '</span><br />'; 
 					} 
 					if ($mail != "") 
 					{  
-						echo 'E-Mail: <span class="view-formularKueBa-Nummer-Vorschau">'; 
+						echo 'E-Mail: <span class="view-formularKueBa-nummer-vorschau">'; 
 						echo $mail;
 						echo $mailEnding;
 						echo '</span>'; 

@@ -59,10 +59,10 @@
 		$phone = $pdfGenerator->customspecialchars(trim($_POST['phone']));
 	    $array = str_split($phone);
 		if (count($array) < 13)
-			$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non è corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+			$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non ï¿½ corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non è corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+				$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non ï¿½ corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 	}
 	if (isset($_POST['fax']))
 		$fax = $pdfGenerator->customspecialchars(trim($_POST['fax']));
@@ -83,10 +83,10 @@ if (strpos($mailF2 ,'@') != false)
 		$phoneF2 = $pdfGenerator->customspecialchars(trim($_POST['phoneF2']));
 	    $array = str_split($phoneF2);
 		if (count($array) < 13)
-			$ErrmessageF2 = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non è corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+			$ErrmessageF2 = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non ï¿½ corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$ErrmessageF2 = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non è corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+				$ErrmessageF2 = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non ï¿½ corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 	}
 	if (isset($_POST['faxF2']))
 		$faxF2 = $pdfGenerator->customspecialchars(trim($_POST['faxF2']));	
@@ -105,11 +105,11 @@ if (strpos($mailF2 ,'@') != false)
 				'Ing. dipl. Fust SA ',  //3
 				$street,  //4
 				$zip,  //5
-				$mail.'@fust.ch'.' · '.' Telefono '.$phone.' · Fax '.$fax, //6
+				$mail.'@fust.ch'.' ï¿½ '.' Telefono '.$phone.' ï¿½ Fax '.$fax, //6
 				'Ing. dipl. Fust SA ', //7
 				$streetF2, //8
 				$zipF2, //9
-				$mailF2.'@fust.ch'.' · '.' Telefono '.$phoneF2.' · Fax '.$faxF2 //10
+				$mailF2.'@fust.ch'.' ï¿½ '.' Telefono '.$phoneF2.' ï¿½ Fax '.$faxF2 //10
 			), 
 			$filialnr, 
 			$anz
@@ -142,7 +142,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10" value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									 (per scopi interni è necessario)
+									 (per scopi interni ï¿½ necessario)
 								</span>
 							</td>
 						</tr>
@@ -259,17 +259,17 @@ else
 				<?php echo $message; ?>
 			<div class="vorschaufenster" >
 				<img src="resource/template/vorlagen/Springer/VK_ital_Springer_VS_leer.jpg" width="400px" />
-				<div class="view-formularVerkaufSpringer-Vorschau-Name"><?php echo $vorname; echo ' '; echo $name; ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-Function1"><?php echo $function1; echo ' '; echo $sparte ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-Function2"><?php echo $function2; ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-AdressZeile"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-Nummern">
+				<div class="view-formularVerkaufSpringer-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-function1"><?php echo $function1; echo ' '; echo $sparte ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-adressZeile"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-nummern">
 					<?php 
 					if ($mail != "") 
 					{ 
 						echo $mail; 
 						echo $mailEnding; 
-						echo " ·"; 
+						echo " Â·"; 
 					}
 					if ($phone != "") 
 					{ 
@@ -278,19 +278,19 @@ else
 					} 
 					if ($fax != "") 
 					{  
-						echo ' · Fax '; 
+						echo ' Â· Fax '; 
 						echo $fax; 
 					} 
 					?>
 				</div>
-				<div class="view-formularVerkaufSpringer-Vorschau-AdressZeileF2"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $streetF2; echo ' <span class="orange">|</span> '; echo $zipF2; ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-NummernF2">
+				<div class="view-formularVerkaufSpringer-vorschau-adressZeileF2"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $streetF2; echo ' <span class="orange">|</span> '; echo $zipF2; ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-nummernF2">
 					<?php 
 					if ($mailF2 != "") 
 					{ 
 						echo $mailF2; 
 						echo $mailEnding; 
-						echo " ·"; 
+						echo " Â·"; 
 					}
 					
 					if ($phoneF2 != "") 
@@ -301,7 +301,7 @@ else
 					
 					if ($faxF2 != "") 
 					{  
-						echo ' · Fax '; 
+						echo ' Â· Fax '; 
 						echo $faxF2; 
 					} 
 					?>

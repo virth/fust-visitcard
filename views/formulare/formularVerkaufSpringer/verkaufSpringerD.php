@@ -105,16 +105,16 @@ if (strpos($mailF2 ,'@') != false)
 				'Dipl.Ing.Fust AG ',  //3
 				$street,  //4
 				$zip,  //5
-				$mail.'@fust.ch'.' · '.' Telefon '.$phone.' · Fax '.$fax, //6
+				$mail.'@fust.ch'.' ï¿½ '.' Telefon '.$phone.' ï¿½ Fax '.$fax, //6
 				'Dipl.Ing.Fust AG ', //7
 				$streetF2, //8
 				$zipF2, //9
-				$mailF2.'@fust.ch'.' · '.' Telefon '.$phoneF2.' · Fax '.$faxF2 //10
+				$mailF2.'@fust.ch'.' ï¿½ '.' Telefon '.$phoneF2.' ï¿½ Fax '.$faxF2 //10
 			), 
 			$filialnr, 
 			$anz
 		);
-		$message = 'Besten Dank für Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
+		$message = 'Besten Dank fï¿½r Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
 	}
 		
 		
@@ -124,7 +124,7 @@ if (strpos($mailF2 ,'@') != false)
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("Sind Sie sicher dass Sie bestellen möchten? Haben Sie alle Texte nochmals überprüft?");
+var agree=confirm("Sind Sie sicher dass Sie bestellen mï¿½chten? Haben Sie alle Texte nochmals ï¿½berprï¿½ft?");
 if (agree)
 	return true ;
 else
@@ -141,7 +141,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(wird nur für interne Zwecke benötigt)
+									(wird nur fï¿½r interne Zwecke benï¿½tigt)
 								</span>
 							</td>
 						</tr>
@@ -260,17 +260,17 @@ else
 				<?php echo $message; ?>
 			<div class="vorschaufenster" >
 				<img src="resource/template/vorlagen/Springer/VK_dt_Springer_VS_leer.jpg" width="400px" />
-				<div class="view-formularVerkaufSpringer-Vorschau-Name"><?php echo $vorname; echo ' '; echo $name; ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-Function1"><?php echo $function1; echo ' '; echo $sparte ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-Function2"><?php echo $function2; ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-AdressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-Nummern">
+				<div class="view-formularVerkaufSpringer-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-function1"><?php echo $function1; echo ' '; echo $sparte ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-adressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-nummern">
 					<?php 
 						if ($mail != "") 
 						{ 
 							echo $mail; 
 							echo $mailEnding; 
-							echo " ·"; 
+							echo " &middot;"; 
 						}
 						if ($phone != "") 
 						{ 
@@ -279,19 +279,19 @@ else
 						} 
 						if ($fax != "") 
 						{  
-							echo ' · Fax '; 
+							echo ' &middot; Fax '; 
 							echo $fax; 
 						} 
 					?>
 				</div>
-				<div class="view-formularVerkaufSpringer-Vorschau-AdressZeileF2"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $streetF2; echo ' <span class="orange">|</span> '; echo $zipF2; ?></div>
-				<div class="view-formularVerkaufSpringer-Vorschau-NummernF2">
+				<div class="view-formularVerkaufSpringer-vorschau-adressZeileF2"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $streetF2; echo ' <span class="orange">|</span> '; echo $zipF2; ?></div>
+				<div class="view-formularVerkaufSpringer-vorschau-nummernF2">
 					<?php 
 						if ($mailF2 != "") 
 						{ 
 							echo $mailF2; 
 							echo $mailEnding; 
-							echo " ·"; 
+							echo " &middot;"; 
 						}
 						
 						if ($phoneF2 != "") 
@@ -302,7 +302,7 @@ else
 						
 						if ($faxF2 != "") 
 						{  
-							echo ' · Fax '; 
+							echo ' &middot; Fax '; 
 							echo $faxF2; 
 						} 
 					?>

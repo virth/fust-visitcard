@@ -110,7 +110,7 @@ $pdfGenerator->sendMail($filename, $anz, $filialnr);
 				if (move_uploaded_file($_FILES['thefile']['tmp_name'],"fotos/".$filename.$_FILES['thefile']['name']))
 				{
 					
-					$message = 'Besten Dank für Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
+					$message = 'Besten Dank fï¿½r Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
 				}
 				else
 					$message = "Fehler beim Foto Upload! Ihre Bestellung konnte nicht abgeschlossen werden!";
@@ -125,7 +125,7 @@ $pdfGenerator->sendMail($filename, $anz, $filialnr);
 function confirmSubmit()
 {
 $('#loadingGif').removeAttr('style');
-var agree=confirm("Sind Sie sicher dass Sie bestellen möchten? Haben Sie alle Texte nochmals überprüft?");
+var agree=confirm("Sind Sie sicher dass Sie bestellen mï¿½chten? Haben Sie alle Texte nochmals ï¿½berprï¿½ft?");
 if (agree)
 	return true ;
 else
@@ -142,7 +142,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(wird nur für interne Zwecke benötigt)
+									(wird nur fï¿½r interne Zwecke benï¿½tigt)
 								</span>
 							</td>
 						</tr>
@@ -166,7 +166,7 @@ else
 							<option <?php if ($function1 == "Verkaufssachbearbeiterin")  { echo 'selected'; } ?>>Verkaufssachbearbeiterin</option>
 							<option <?php if ($function1 == "Produktmanager")  { echo 'selected'; } ?>>Produktmanager</option>
 							<option <?php if ($function1 == "Einkauf")  { echo 'selected'; } ?>>Einkauf</option>
-							<option <?php if ($function1 == "Lager Küche & Bad")  { echo 'selected'; } ?>>Lager Küche & Bad</option>
+							<option <?php if ($function1 == "Lager Kï¿½che & Bad")  { echo 'selected'; } ?>>Lager Kï¿½che & Bad</option>
 							<option <?php if ($function1 == "Montage")  { echo 'selected'; } ?>>Montage</option>
 							<option <?php if ($function1 == "Servicemonteur")  { echo 'selected'; } ?>>Servicemonteur</option>
 							<option <?php if ($function1 == "Disposition")  { echo 'selected'; } ?>>Disposition</option>
@@ -222,7 +222,7 @@ else
 						<tr>
 							<td align="right">Foto Upload (max 10mb):</td>
 							<td><input name="thefile" type="file" size="30"></td>
-							<td>(Dunkler Anzug, Krawatte. Das Porträt muss vorgängig vom RVL für gut befunden werden)</td>
+							<td>(Dunkler Anzug, Krawatte. Das Portrï¿½t muss vorgï¿½ngig vom RVL fï¿½r gut befunden werden)</td>
 						</tr>
 						<tr>
 							<td align="right">Anzahl:</td>
@@ -240,33 +240,33 @@ else
 				<?php echo $message; ?>
 			<div class="vorschaufenster" >
 				<img src="resource/template/vorlagen/KueBa/VK_dt_KueBa_VS_leer.jpg" width="400px" />
-				<div class="view-formularKueBa-Vorschau-Name"><?php echo $vorname; echo ' '; echo $name; ?></div>
-				<div class="view-formularKueBa-Vorschau-Function1"><?php echo $function1; echo ' '; echo $sparte ?></div>
-				<div class="view-formularKueBa-Vorschau-Function2"><?php echo $function2; ?></div>
-				<div class="view-formularKueBa-Vorschau-AdressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
-				<div class="view-formularKueBa-Vorschau-Nummern">
+				<div class="view-formularKueBa-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
+				<div class="view-formularKueBa-vorschau-function1"><?php echo $function1; echo ' '; echo $sparte ?></div>
+				<div class="view-formularKueBa-vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularKueBa-vorschau-adressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
+				<div class="view-formularKueBa-vorschau-nummern">
 					<?php 
 						if ($phone != "") 
 						{ 
-							echo 'Telefon: <span class="view-formularKueBa-Nummer-Vorschau">'; 
+							echo 'Telefon: <span class="view-formularKueBa-nummer-vorschau">'; 
 							echo $phone; 
 							echo '</span><br />'; 
 						} 
 						if ($mobile != "") 
 						{  
-							echo 'Mobile: <span class="view-formularKueBa-Nummer-Vorschau">'; 
+							echo 'Mobile: <span class="view-formularKueBa-nummer-vorschau">'; 
 							echo $mobile; 
 							echo '</span><br />'; 
 						}  
 						if ($fax != "") 
 						{  
-							echo 'Fax: <span class="view-formularKueBa-Nummer-Vorschau">'; 
+							echo 'Fax: <span class="view-formularKueBa-nummer-vorschau">'; 
 							echo $fax; 
 							echo '</span><br />'; 
 						} 
 						if ($mail != "") 
 						{  
-							echo 'E-Mail: <span class="view-formularKueBa-Nummer-Vorschau">'; 
+							echo 'E-Mail: <span class="view-formularKueBa-nummer-vorschau">'; 
 							echo $mail;
 							echo $mailEnding;
 							echo '</span>'; 
