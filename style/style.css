@@ -6,9 +6,9 @@ Allgemein
 
 @font-face {
 	font-family:frutiger; 
-	src:url("ffonts/FrutigerLTStd-Light.otf");
+	src:url("/ffonts/FrutigerLTStd-Light.otf");
 	font-family:frutigerbold;
-	src:url("ffonts/FrutigerLTStd-Bold.otf");
+	src:url("/ffonts/FrutigerLTStd-Bold.otf");
 }  
 
 body { 
