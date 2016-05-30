@@ -1,0 +1,453 @@
+@CHARSET "ISO-8859-1";
+
+/******************************
+Allgemein
+*************************/
+
+@font-face {
+	font-family:frutiger; 
+	src:url("ffonts/FrutigerLTStd-Light.otf");
+	font-family:frutigerbold;
+	src:url("ffonts/FrutigerLTStd-Bold.otf");
+}  
+
+body { 
+	background-color: #aaa;
+	font-family:Verdana;
+}
+
+.red {
+	color:red; 	
+}
+
+hr {
+	margin-top: 10px; 
+	border: none; 
+	border-top: 1px; 
+	color: #FFFFFF; 
+	background-color: #FFFFFF; 
+	height: 3px;
+	size:5;	
+}
+
+.headerLogo {
+	margin-left: 20px; 
+	margin-right: 100px; 
+	margin-top: 20px; 
+	margin-bottom: 20px; 
+	height: 90px;	
+}
+
+.content {
+	margin-left:80;
+	margin-top:30px;
+}
+
+h4 {
+	margin-bottom:5px;
+	margin-top:20px;
+	font-size:14px;
+}
+
+
+td.auswahl {
+	padding-right:120px;	
+}
+
+.logoutIMG  {
+	border-style:none;
+	width:100px;
+
+	}
+	
+.view-sprachAuswahl-link {
+	margin-bottom: 10px;
+}
+
+.view-sprachAuswahl-link a{
+	color: #000000;
+	text-decoration: none;
+}
+
+
+
+/******************************
+Alle Formulare
+*************************/
+
+.view-AlleFormulare-horizontalLinie {
+	margin-top:10px;
+	border:none;
+	border-top:1px;
+	color:#FFFFFF;
+	background-color:#FFFFFF;
+	height:3px;
+}
+
+.orange {
+ color: #F37021;
+}
+
+.vorschaufenster {	
+	position:absolute;
+	top:160px;
+	left:540px;
+	height:250px;
+	width:400px;
+	border-style:solid;
+	border-color:#000;
+	border-width:0px;
+	margin-left:80;
+	margin-top:30px;
+	padding-top:0px;
+}
+
+.vorschaufenster-rueckseite {
+	position:absolute;
+	top:160px;
+	left:950px;
+	height:254px;
+	width:400px;
+	border-style:solid;
+	border-color:#000;
+	border-width:0px;
+	margin-left:80;
+	margin-top:30px;
+}
+
+.formularTabelle {
+	border-color:#ff0000;
+	color:#ffffff;
+	border:0;
+	cellpadding:0; 
+	cellspacing:8;
+}
+
+.tabellenKommentar {
+	font-size:10px;
+}
+
+
+/******************************
+Formular Administration
+*************************/
+
+.view-formularAdmin-vorschau-name {
+	font-size:20px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+        font-weight:bold;
+	margin-top:-159px;
+	text-align:center;
+}
+	
+.view-formularAdmin-vorschau-function1 {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+    font-weight:bold;
+	top:120;
+	text-align:center;
+}
+
+.view-formularAdmin-vorschau-function2 {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+    font-weight:bold;
+	top:135;
+	text-align:center;
+}
+
+.view-formularAdmin-vorschau-adressZeile {
+	font-size:12px;
+	width:450px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+    font-weight:bold;
+	top:165;
+	text-align:center;
+}
+
+.view-formularAdmin-vorschau-mail {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+	top:185;
+	text-align:center;
+}
+
+.view-formularAdmin-vorschau-nummern {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+	top:205;
+	text-align:center;
+	letter-spacing: -1px;
+}
+
+
+
+/******************************
+Formular Verkauf
+*************************/
+
+.view-formularVerkauf-vorschau-name {
+	font-size:20px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+        font-weight:bold;
+	margin-top:-159px;
+	text-align:center;
+}
+	
+.view-formularVerkauf-vorschau-function1 {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+        font-weight:bold;
+	top:120;
+	text-align:center;
+}
+
+.view-formularVerkauf-vorschau-function2 {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+    font-weight:bold;
+	top:135;
+	text-align:center;
+}
+
+.view-formularVerkauf-vorschau-adressZeile {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+        font-weight:bold;
+	top:165;
+	text-align:center;
+}
+
+.view-formularVerkauf-vorschau-mail {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+	top:180;
+	text-align:center;
+}
+
+.view-formularVerkauf-vorschau-nummern {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+	top:195;
+	text-align:center;
+	letter-spacing: -1px;
+}
+
+.view-formularVerkauf-vorschau-FreierWochentag {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+	top:210;
+	text-align:center;
+	letter-spacing: -1px;
+}
+
+/******************************
+Formular Verkauf Springer
+*************************/
+
+.view-formularVerkaufSpringer-vorschau-name {
+	font-size:20px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+        font-weight:bold;
+	margin-top:-159px;
+	text-align:center;
+}
+	
+.view-formularVerkaufSpringer-vorschau-function1 {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+        font-weight:bold;
+	top:120;
+	text-align:center;
+}
+
+.view-formularVerkaufSpringer-vorschau-function2 {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+    font-weight:bold;
+	top:135;
+	text-align:center;
+}
+
+.view-formularVerkaufSpringer-vorschau-adressZeile {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+        font-weight:bold;
+	top:158;
+	text-align:center;
+}
+
+
+.view-formularVerkaufSpringer-vorschau-nummern {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+	top:173;
+	text-align:center;
+	letter-spacing: -1px;
+}
+
+
+.view-formularVerkaufSpringer-vorschau-adressZeileF2 {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+        font-weight:bold;
+	top:198;
+	text-align:center;
+}
+
+
+.view-formularVerkaufSpringer-vorschau-nummernF2 {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+	top:213;
+	text-align:center;
+	letter-spacing: -1px;
+}
+
+/******************************
+Formular Monteur
+*************************/
+
+.view-formularMonteur-vorschau-name {
+	font-size:20px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+        font-weight:bold;
+	margin-top:-159px;
+	text-align:center;
+}
+	
+.view-formularMonteur-vorschau-function1 {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+        font-weight:bold;
+	top:120;
+	text-align:center;
+}
+
+.view-formularMonteur-vorschau-function2 {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+    font-weight:bold;
+	top:135;
+	text-align:center;
+}
+
+.view-formularMonteur-vorschau-region{
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+    font-weight:bold;
+	top:165;
+	text-align:center;
+}
+
+
+
+
+/******************************
+Formular KueBa
+*************************/
+
+.view-formularKueBa-vorschau-name {
+	position:absolute;
+	font-size:20px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+        font-weight:bold;
+	top:75;
+	left:150;
+}
+	
+.view-formularKueBa-vorschau-function1 {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+        font-weight:bold;
+	top:98;
+	left:150;
+	
+}
+
+.view-formularKueBa-vorschau-function2 {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+    font-weight:bold;
+	left:150;
+	top:113;
+	
+}
+
+.view-formularKueBa-vorschau-adressZeile {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+        font-weight:bold;
+	margin-top:-45;
+	text-align:center;
+}
+
+
+.view-formularKueBa-vorschau-nummern {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+	top:130;
+	left: 150;
+    letter-spacing: -1px;
+}
+
+.view-formularKueBa-Nummer-Vorschau {
+	font-size:12px;
+	width:400px;
+	font-family:frutigerbold, Verdana;
+	position:absolute;
+	left: 50;
+    letter-spacing: -1px;
+
+}
