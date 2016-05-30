@@ -53,7 +53,7 @@ class pdfgenerator
 		//PDF speichern
 		$fname = $this->writePDF($pdf, $data[0], $filialnr, $menge, $type);
 
-		//Lese Empfänger Adressen und schreibe E-Mails
+		//Lese Empfï¿½nger Adressen und schreibe E-Mails
 		if ($type != "kueBa")
 			$this->sendMail($fname, $menge, $filialnr);
 		return $fname;
@@ -70,9 +70,9 @@ class pdfgenerator
 		$now = date("H-i-s");//, strtotime(date('r')));
 		$date = date("Y-m-d");
 		$filename = strtolower($date.'_'.$typ.'_'.$name.'_'.$now."_".$menge.".pdf");
-		$filename = str_replace("ö", "oe", $filename);
-		$filename = str_replace("ä", "ae", $filename);
-		$filename = str_replace("ü", "ue", $filename);
+		$filename = str_replace("ï¿½", "oe", $filename);
+		$filename = str_replace("ï¿½", "ae", $filename);
+		$filename = str_replace("ï¿½", "ue", $filename);
 		$filename = str_replace(" ", "_", $filename);
 		$filename = urlencode ($filename);
 
@@ -90,7 +90,7 @@ class pdfgenerator
 			$absendername = "FUST Online Portal";
 			$absendermail = "Fust.Onlineportal@e-druck.ch";
 			$betreff = "Bestellung Fust Visitenkarte";
-			$text = "Guten Tag \n\n Soeben ist eine Bestellung für Filial Nr $filialnr eingegangen. \n\nBestellte Visitenkarte: $menge \n\n PDF: http://visitcard.ch/vcards/".urlencode($fname);;
+			$text = "Guten Tag \n\n Soeben ist eine Bestellung fï¿½r Filial Nr $filialnr eingegangen. \n\nBestellte Visitenkarte: $menge \n\n PDF: http://visitcard.ch/vcards/".urlencode($fname);;
 
 			mail($entrysArray[$i], $betreff, $text, "From: $absendername <$absendermail>");
 		}
@@ -139,7 +139,7 @@ class pdfgenerator
 		{
 			$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 			$pdf-> SetXY(0, 46.5);
-			$pdf->Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[8]),0,1,"C");
+			$pdf->Cell(90,5,$dataArray[8],0,1,"C");
 		}
 		else
 		{
@@ -156,7 +156,7 @@ class pdfgenerator
 		//Zeile Mail
 		$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 		$pdf-> SetXY(0, $mailPOS);
-		$pdf->Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[6]),0,1,"C");
+		$pdf->Cell(90,5,$dataArray[6],0,1,"C");
 
 		//Zeile Adresse
 		$pdf = $this->writeAdress($dataArray[4], $dataArray[5], $dataArray[3], $adressePOS, $pdf);
@@ -171,17 +171,17 @@ class pdfgenerator
 		//Zeile Funktion 2
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',8.5);
 		$pdf-> SetXY(0, 32 - $add);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[2]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[2],0,1,"C");
 
 		//Zeile Funktion 1
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',8.5);
 		$pdf-> SetXY(0, 29 - $add);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[1]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[1],0,1,"C");
 
 		//Zeile Name
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',14);
 		$pdf-> SetXY(0, 24.8 - $add);
-        $pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[0]),0,1,"C");
+        $pdf-> Cell(90,5,$dataArray[0],0,1,"C");
 
 
 
@@ -223,7 +223,7 @@ class pdfgenerator
 		//Zeile Nummern + MAIL Filiale 2
 		$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 		$pdf-> SetXY(0, 45.5);
-		$pdf->Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[10]),0,1,"C");
+		$pdf->Cell(90,5,$dataArray[10],0,1,"C");
 
 		//Zeile Adresse Filiale 2
 		$pdf = $this->writeAdress($dataArray[8], $dataArray[9], $dataArray[7], 42, $pdf);
@@ -231,7 +231,7 @@ class pdfgenerator
 		//Zeile Nummern + MAIL Filiale 1
 		$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 		$pdf-> SetXY(0, 37);
-		$pdf->Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[6]),0,1,"C");
+		$pdf->Cell(90,5,$dataArray[6],0,1,"C");
 
 		//Zeile Adresse Filiale 1
 		$pdf = $this->writeAdress($dataArray[4], $dataArray[5], $dataArray[3], 33.5, $pdf);
@@ -239,17 +239,17 @@ class pdfgenerator
 		//Zeile Funktion 2
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',8.5);
 		$pdf-> SetXY(0, 28.5);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[2]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[2],0,1,"C");
 
 		//Zeile Funktion 1
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',8.5);
 		$pdf-> SetXY(0, 25.5);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[1]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[1],0,1,"C");
 
 		//Zeile Name
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',14);
 		$pdf-> SetXY(0, 20.5);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[0]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[0],0,1,"C");
 
 		$anzahl = $pdf->setSourceFile($rueckseite);
 		$pdf-> addPage('mm', $size);
@@ -298,12 +298,12 @@ class pdfgenerator
 		//Zeile Mail
 		$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 		$pdf-> SetXY($abstandlinks, $mailPos);
-		$pdf-> Cell(40,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[10]),0,1);
+		$pdf-> Cell(40,5,$dataArray[10],0,1);
 
 		//Zeile Mail TEXT
 		$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 		$pdf-> SetXY(33.5, $mailPos);
-		$pdf-> Cell(40,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[9]),0,1);
+		$pdf-> Cell(40,5,$dataArray[9],0,1);
 
 		$mailPos = $mailPos - $diff;
 
@@ -312,12 +312,12 @@ class pdfgenerator
 			//Zeile FAX
 			$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 			$pdf-> SetXY($abstandlinks, $mailPos);
-			$pdf-> Cell(40,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[8]),0,1);
+			$pdf-> Cell(40,5,$dataArray[8],0,1);
 
 			//Zeile Fax TEXT
 			$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 			$pdf-> SetXY(33.5, $mailPos);
-			$pdf-> Cell(40,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[7]),0,1);
+			$pdf-> Cell(40,5,$dataArray[7],0,1);
 			$mailPos = $mailPos - $diff;
 		}
 
@@ -326,40 +326,40 @@ class pdfgenerator
 			//Zeile Mobile
 			$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 			$pdf-> SetXY($abstandlinks, $mailPos);
-			$pdf-> Cell(40,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[6]),0,1);
+			$pdf-> Cell(40,5,$dataArray[6],0,1);
 
 			//Zeile Mobile TEXT
 			$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 			$pdf-> SetXY(33.5, $mailPos);
-			$pdf-> Cell(40,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[5]),0,1);
+			$pdf-> Cell(40,5,$dataArray[5],0,1);
 			$mailPos = $mailPos - $diff;
 		}
 		//Zeile Tel
 		$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 		$pdf-> SetXY($abstandlinks, $mailPos);
-		$pdf-> Cell(40,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[4]),0,1);
+		$pdf-> Cell(40,5,$dataArray[4],0,1);
 
 		//Zeile Tel TEXT
 		$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 		$pdf-> SetXY(33.5, $mailPos);
-		$pdf-> Cell(40,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[3]),0,1);
+		$pdf-> Cell(40,5,$dataArray[3],0,1);
 
 		$mailPos = $mailPos - $diff;
 
 		//Funktion 2
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',8.5);
 		$pdf-> SetXY(33.5, 26.5);
-		$pdf-> Cell(40,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[2]),0,1);
+		$pdf-> Cell(40,5,$dataArray[2],0,1);
 
 		//Funktion 1
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',8.5);
 		$pdf-> SetXY(33.5, 23.5);
-		$pdf-> Cell(40,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[1]),0,1);
+		$pdf-> Cell(40,5,$dataArray[1],0,1);
 
 		//Zeile Name
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',14);
 		$pdf-> SetXY(33.5, 19);
-		$pdf-> Cell(40,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[0]),0,1);
+		$pdf-> Cell(40,5,$dataArray[0],0,1);
 
 
 		$anzahl = $pdf->setSourceFile($rueckseite);
@@ -389,12 +389,12 @@ class pdfgenerator
 		//Zeile Nummern
 		$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 		$pdf-> SetXY(0, 46.5);
-		$pdf->Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[7]),0,1,"C");
+		$pdf->Cell(90,5,$dataArray[7],0,1,"C");
 
 		//Zeile Mail
 		$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 		$pdf-> SetXY(0, 43);
-		$pdf->Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[6]),0,1,"C");
+		$pdf->Cell(90,5,$dataArray[6],0,1,"C");
 
 		//Zeile Adresse
 		$pdf = $this->writeAdress($dataArray[4], $dataArray[5], $dataArray[3], 38, $pdf);
@@ -402,17 +402,17 @@ class pdfgenerator
 		//Zeile Funktion 2
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',8.5);
 		$pdf-> SetXY(0, 32.5);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[2]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[2],0,1,"C");
 
 		//Zeile Funktion 1
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',8.5);
 		$pdf-> SetXY(0, 29.3);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[1]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[1],0,1,"C");
 
 		//Zeile Name
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',14);
 		$pdf-> SetXY(0, 24);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[0]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[0],0,1,"C");
 
 		return $pdf;
 	}
@@ -434,22 +434,22 @@ class pdfgenerator
 		//Zeile Region + Sparte
 		$pdf-> SetFont('FrutigerLTStd-BlackCn','',8.5);
 		$pdf-> SetXY(0, 38);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[3]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[3],0,1,"C");
 
 		//Zeile Funktion 2
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',8.5);
 		$pdf-> SetXY(0, 31);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[2]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[2],0,1,"C");
 
 		//Zeile Funktion 1
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',8.5);
 		$pdf-> SetXY(0, 27.8);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[1]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[1],0,1,"C");
 
 		//Zeile Name
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',14);
 		$pdf-> SetXY(0, 22.5);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[0]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[0],0,1,"C");
 
 		return $pdf;
 	}
@@ -473,12 +473,12 @@ class pdfgenerator
 		//Zeile Nummern
 		$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 		$pdf-> SetXY(0, 46.5);
-		$pdf->Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[7]),0,1,"C");
+		$pdf->Cell(90,5,$dataArray[7],0,1,"C");
 
 		//Zeile Mail
 		$pdf-> SetFont('FrutigerLTStd-Cn','',8.5);
 		$pdf-> SetXY(0, 43);
-		$pdf->Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[6]),0,1,"C");
+		$pdf->Cell(90,5,$dataArray[6],0,1,"C");
 
 		//Zeile Adresse
 		$pdf = $this->writeAdress($dataArray[4], $dataArray[5], $dataArray[3], 39, $pdf);
@@ -487,17 +487,17 @@ class pdfgenerator
 
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',8.5);
 		$pdf-> SetXY(0, 31.5);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[2]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[2],0,1,"C");
 
 		//Zeile Funktion 1
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',8.5);
 		$pdf-> SetXY(0, 28.3);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[1]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[1],0,1,"C");
 
 		//Zeile Name
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',14);
 		$pdf-> SetXY(0, 23);
-		$pdf-> Cell(90,5,iconv("UTF-8", "CP1250//TRANSLIT", $dataArray[0]),0,1,"C");
+		$pdf-> Cell(90,5,$dataArray[0],0,1,"C");
 
 		return $pdf;
 	}
