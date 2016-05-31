@@ -103,7 +103,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="36" value="<?php echo $filialnr;?>">
 								<span class="tabellenKommentar" >
-									(wird nur für interne Zwecke benétigt)
+									(wird nur für interne Zwecke benötigt)
 								</span>
 							</td>
 						</tr>
