@@ -204,7 +204,7 @@ else
 				<div class="view-formularVerkauf-vorschau-function2"><?php echo $function2; ?></div>
 				<div class="view-formularVerkauf-vorschau-adressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
 				<div class="view-formularVerkauf-vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
-				<div class="view-formularVerkauf-vorschau-nummern"><?php if ($phone != "") { echo ' Telefon '; echo $phone; } if ($fax != "") {  echo ' · Fax '; echo $fax; } ?></div>
+				<div class="view-formularVerkauf-vorschau-nummern"><?php if ($phone != "") { echo ' Telefon '; echo $phone; } if ($fax != "") {  echo ' &middot; Fax '; echo $fax; } ?></div>
 				<div class="view-formularVerkauf-vorschau-freierWochentag"><?php if ($freierTag != "") { echo 'Freier Wochentag: '; echo $freierTag; } ?></div>
 			</div>
 			<div class="vorschaufenster-rueckseite">

@@ -39,7 +39,7 @@ hr {
 }
 
 .content {
-	margin-left:80;
+	margin-left:80px;
 	margin-top:30px;
 }
 
@@ -97,7 +97,7 @@ Alle Formulare
 	border-style:solid;
 	border-color:#000;
 	border-width:0px;
-	margin-left:80;
+	margin-left:80px;
 	margin-top:30px;
 	padding-top:0px;
 }
@@ -111,7 +111,7 @@ Alle Formulare
 	border-style:solid;
 	border-color:#000;
 	border-width:0px;
-	margin-left:80;
+	margin-left:80px;
 	margin-top:30px;
 }
 
@@ -397,7 +397,7 @@ Formular KueBa
 	font-family:frutigerbold, Verdana;
         font-weight:bold;
 	top:75px;
-	left:150;
+	left:150px;
 }
 	
 .view-formularKueBa-vorschau-function1 {
@@ -407,7 +407,7 @@ Formular KueBa
 	position:absolute;
         font-weight:bold;
 	top:98px;
-	left:150;
+	left:150px;
 	
 }
 
@@ -426,8 +426,8 @@ Formular KueBa
 	font-size:12px;
 	width:400px;
 	font-family:frutigerbold, Verdana;
-        font-weight:bold;
-	margin-top:-45;
+    font-weight:bold;
+	margin-top:-45px;
 	text-align:center;
 }
 

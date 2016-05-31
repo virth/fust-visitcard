@@ -63,7 +63,7 @@
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("�tes-vous sure, que vous voulez comander? Avez vous controll� tous les textes?");
+var agree=confirm("&eacute;tes-vous sure, que vous voulez comander? Avez vous controll&eacute; tous les textes?");
 if (agree)
 	return true ;
 else
@@ -91,7 +91,7 @@ else
 						  <td><input name="name" type="text" size="30" maxlength="20" value="<?php echo $name;?>"></td>
 						</tr>
 						<tr>
-						  <td align="right">Pr�nom:</td>
+						  <td align="right">Pr&eacute;nom:</td>
 						  <td><input name="vorname" type="text" size="30" maxlength="20" value="<?php echo $vorname;?>"></td>
 						</tr>
 						<tr>
@@ -140,7 +140,7 @@ else
 				<div class="view-formularMonteur-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
 				<div class="view-formularMonteur-vorschau-function1"><?php echo $function1; echo ' '; echo $sparte; ?></div>
 				<div class="view-formularMonteur-vorschau-function2"><?php echo $function2; ?></div>
-				<div class="view-formularMonteur-vorschau-region"><?php echo 'R�gion '; echo $region; ?></div>
+				<div class="view-formularMonteur-vorschau-region"><?php echo 'R&eacute;gion '; echo $region; ?></div>
 			</div>
 		</div>
 	</body>

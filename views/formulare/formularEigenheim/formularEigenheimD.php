@@ -185,7 +185,7 @@ else
 				<div class="view-formularAdmin-vorschau-function2"><?php echo $function2; ?></div>
 				<div class="view-formularAdmin-vorschau-adressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
 				<div class="view-formularAdmin-vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
-				<div class="view-formularAdmin-vorschau-nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' · '; } if ($phone != "") { echo ' Telefon '; echo $phone; } if ($fax != "") {  echo ' � Fax '; echo $fax; } ?></div>
+				<div class="view-formularAdmin-vorschau-nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' &middot; '; } if ($phone != "") { echo ' Telefon '; echo $phone; } if ($fax != "") {  echo ' &middot; Fax '; echo $fax; } ?></div>
 			</div>
 		</div>
 	</body>

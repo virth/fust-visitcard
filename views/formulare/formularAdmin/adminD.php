@@ -186,10 +186,10 @@ else
 				<img src="resource/template/vorlagen/Administration/VK_dt_Administration_leer.jpg" width="400px" />
 				<div class="view-formularAdmin-vorschau-name"><?php echo $vorname; echo ' '; echo $name; ?></div>
 				<div class="view-formularAdmin-vorschau-function1"><?php echo $function1; ?></div>
-				<div class="view-formularAdmin-Vorschau-function2"><?php echo $function2; ?></div>
-				<div class="view-formularAdmin-Vorschau-adressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
-				<div class="view-formularAdmin-Vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
-				<div class="view-formularAdmin-Vorschau-nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' · '; } if ($phone != "") { echo ' Telefon '; echo $phone; } if ($fax != "") {  echo ' � Fax '; echo $fax; } ?></div>
+				<div class="view-formularAdmin-vorschau-function2"><?php echo $function2; ?></div>
+				<div class="view-formularAdmin-vorschau-adressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
+				<div class="view-formularAdmin-vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
+				<div class="view-formularAdmin-vorschau-nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' &middot; '; } if ($phone != "") { echo ' Telefon '; echo $phone; } if ($fax != "") {  echo ' &middot; Fax '; echo $fax; } ?></div>
 			</div>
 		</div>
 	</body>

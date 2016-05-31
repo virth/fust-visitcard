@@ -314,7 +314,3 @@ else
 		</div>
 	</body>
 </html>
-
-
-
-

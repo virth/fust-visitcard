@@ -202,7 +202,7 @@ else
 				<div class="view-formularVerkauf-vorschau-function2"><?php echo $function2; ?></div>
 				<div class="view-formularVerkauf-vorschau-adressZeile" <?php if((strlen($street) + strlen($zip)) > 32) { echo 'style=font-size:9px;'; } ?>><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
 				<div class="view-formularVerkauf-vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
-				<div class="view-formularVerkauf-vorschau-nummern"><?php if ($phone != "") { echo ' Téléphone '; echo $phone; } if ($fax != "") {  echo ' · Fax '; echo $fax; } ?></div>
+				<div class="view-formularVerkauf-vorschau-nummern"><?php if ($phone != "") { echo ' Téléphone '; echo $phone; } if ($fax != "") {  echo ' &middot; Fax '; echo $fax; } ?></div>
 				<div class="view-formularVerkauf-vorschau-freierWochentag"><?php if ($freierTag != "") { echo 'jour congé: '; echo $freierTag; } ?></div>
 			</div>
 			<div class="vorschaufenster-rueckseite">

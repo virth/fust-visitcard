@@ -273,7 +273,7 @@ else
 					{ 
 						echo $mail; 
 						echo $mailEnding; 
-						echo " ·"; 
+						echo " &middot;"; 
 					}
 					if ($phone != "") 
 					{ 
@@ -282,7 +282,7 @@ else
 					} 
 					if ($fax != "") 
 					{  
-						echo ' · Fax '; 
+						echo ' &middot; Fax '; 
 						echo $fax; 
 					} 
 					?>

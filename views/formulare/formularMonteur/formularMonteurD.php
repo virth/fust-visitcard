@@ -81,7 +81,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(wird nur f�r interne Zwecke ben�tigt)
+									(wird nur f&uuml; interne Zwecke ben&ouml;tigt)
 								</span>
 							</td>
 						</tr>
