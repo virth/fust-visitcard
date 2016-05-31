@@ -83,7 +83,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(per scopi interni � necessario)
+									(per scopi interni é necessario)
 								</span>
 							</td>
 						</tr>
@@ -123,7 +123,7 @@ else
 							</td>
 						</tr>
 						<tr>
-							<td align="right">Quantit�:</td>
+							<td align="right">Quantité:</td>
 							<td>
 								<select name="anz" size="1">
 	      							<option>100</option>

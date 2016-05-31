@@ -110,7 +110,7 @@ $pdfGenerator->sendMail($filename, $anz, $filialnr);
 				if (move_uploaded_file($_FILES['thefile']['tmp_name'],"fotos/".$filename.$_FILES['thefile']['name']))
 				{
 					
-					$message = 'Besten Dank f�r Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
+					$message = 'Besten Dank für Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
 				}
 				else
 					$message = "Fehler beim Foto Upload! Ihre Bestellung konnte nicht abgeschlossen werden!";
@@ -125,7 +125,7 @@ $pdfGenerator->sendMail($filename, $anz, $filialnr);
 function confirmSubmit()
 {
 $('#loadingGif').removeAttr('style');
-var agree=confirm("Sind Sie sicher dass Sie bestellen m�chten? Haben Sie alle Texte nochmals �berpr�ft?");
+var agree=confirm("Sind Sie sicher dass Sie bestellen möchten? Haben Sie alle Texte nochmals überprüft?");
 if (agree)
 	return true ;
 else
@@ -133,7 +133,7 @@ else
 }
 </script>
 
-				<h3>K&uuml;chen und Badezimmer</h3>
+				<h3>Küchen und Badezimmer</h3>
 		
 				<form action="index.php?site=formularKueBa&language=d" method="post" enctype="multipart/form-data">
 					<table class="formularTabelle">	
@@ -142,7 +142,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(wird nur f�r interne Zwecke ben�tigt)
+									(wird nur für interne Zwecke benétigt)
 								</span>
 							</td>
 						</tr>
@@ -166,7 +166,7 @@ else
 							<option <?php if ($function1 == "Verkaufssachbearbeiterin")  { echo 'selected'; } ?>>Verkaufssachbearbeiterin</option>
 							<option <?php if ($function1 == "Produktmanager")  { echo 'selected'; } ?>>Produktmanager</option>
 							<option <?php if ($function1 == "Einkauf")  { echo 'selected'; } ?>>Einkauf</option>
-							<option <?php if ($function1 == "Lager K�che & Bad")  { echo 'selected'; } ?>>Lager K�che & Bad</option>
+							<option <?php if ($function1 == "Lager Küche & Bad")  { echo 'selected'; } ?>>Lager Küche & Bad</option>
 							<option <?php if ($function1 == "Montage")  { echo 'selected'; } ?>>Montage</option>
 							<option <?php if ($function1 == "Servicemonteur")  { echo 'selected'; } ?>>Servicemonteur</option>
 							<option <?php if ($function1 == "Disposition")  { echo 'selected'; } ?>>Disposition</option>
@@ -222,7 +222,7 @@ else
 						<tr>
 							<td align="right">Foto Upload (max 10mb):</td>
 							<td><input name="thefile" type="file" size="30"></td>
-							<td>(Dunkler Anzug, Krawatte. Das Portr�t muss vorg�ngig vom RVL f�r gut befunden werden)</td>
+							<td>(Dunkler Anzug, Krawatte. Das Porträt muss vorgängig vom RVL für gut befunden werden)</td>
 						</tr>
 						<tr>
 							<td align="right">Anzahl:</td>

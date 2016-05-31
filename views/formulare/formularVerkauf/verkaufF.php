@@ -46,17 +46,17 @@
         { 
 		$mail = $pdfGenerator->customspecialchars(trim($_POST['mail']));
 	        if (strpos($mail,'@') != false)
-                	$Errmessage =	 "<script type='text/javascript'>alert ('E-mail doit �tre entr� sans @fust.ch');</script>";
+                	$Errmessage =	 "<script type='text/javascript'>alert ('E-mail doit étre entré sans @fust.ch');</script>";
 	}
 	if (isset($_POST['phone']))
 	{
 		$phone = $pdfGenerator->customspecialchars(trim($_POST['phone']));
 	    $array = str_split($phone);
 		if (count($array) < 13)
-			$Errmessage = "<span class='red' style=\"font-size:10px;\">Le n� de t�l�phone n�a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
+			$Errmessage = "<span class='red' style=\"font-size:10px;\">Le né de téléphone néa pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<span class='red' style=\"font-size:10px;\">Le n� de t�l�phone n�a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
+				$Errmessage = "<span class='red' style=\"font-size:10px;\">Le né de téléphone néa pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
 	}
 
 	if (isset($_POST['fax']))
@@ -70,8 +70,8 @@
 	{
 		$freierWochentag = "";
 		if ($freierTag != "")
-			$freierWochentag = "jour cong�: ".$freierTag;
-		$filename = $pdfGenerator->generatePdf("verkauf", "F", array($vorname.' '.$name, $function1.' '.$sparte, $function2, 'Ing. dipl. Fust SA ', $street, $zip, $mail.'@fust.ch', 'T�l�phone '.$phone.' � Fax '.$fax, $freierWochentag), $filialnr, $anz);
+			$freierWochentag = "jour congé: ".$freierTag;
+		$filename = $pdfGenerator->generatePdf("verkauf", "F", array($vorname.' '.$name, $function1.' '.$sparte, $function2, 'Ing. dipl. Fust SA ', $street, $zip, $mail.'@fust.ch', 'Téléphone '.$phone.' · Fax '.$fax, $freierWochentag), $filialnr, $anz);
 		$message = 'Merci pour votre commandation <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">Visionner PDF<br />  <a href="index.php?site=cardSelection&language=f">Commander nouvelle carte de visite</a>';
 	}
 
@@ -83,7 +83,7 @@
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("�tes-vous sure, que vous voulez comander? Avez vous controll� tous les textes?");
+var agree=confirm("étes-vous sure, que vous voulez comander? Avez vous controllé tous les textes?");
 if (agree)
 	return true ;
 else
@@ -97,7 +97,7 @@ else
 				<form action="index.php?site=formularVerkauf&language=f" method="post">
 					<table class="formularTabelle">	
 						<tr>
-						  <td align="right">Num�ro filiale:</td>
+						  <td align="right">Numéro filiale:</td>
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10" value="<?php echo $filialnr;?>">
 								<span class="tabellenKommentar" >
@@ -110,19 +110,19 @@ else
 						  <td><input name="name" type="text" size="30" maxlength="20" value="<?php echo $name;?>"></td>
 						</tr>
 						<tr>
-						  <td align="right">Pr�nom:</td>
+						  <td align="right">Prénom:</td>
 						  <td><input name="vorname" type="text" size="30" maxlength="20" value="<?php echo $vorname;?>"></td>
 						</tr>
 						<tr>
 						  <td align="right">Fonction 1:</td>
 						  <td>
 							<select name="function1" type="text" size="1" maxlength="35" value="<?php echo $function1;?>">
-							<option <?php if ($function1 == "Conseill�re de vente")  { echo 'selected'; } ?>>Conseill�re de vente</option>
+							<option <?php if ($function1 == "Conseillére de vente")  { echo 'selected'; } ?>>Conseillére de vente</option>
 							<option <?php if ($function1 == "Conseiller de vente")  { echo 'selected'; } ?>>Conseiller de vente</option>
-							<option <?php if ($function1 == "Chef du d�partement")  { echo 'selected'; } ?>>Chef du d�partement</option>
+							<option <?php if ($function1 == "Chef du département")  { echo 'selected'; } ?>>Chef du département</option>
 							<option <?php if ($function1 == "Chef de succursale")  { echo 'selected'; } ?>>Chef de succursale</option>
-							<option <?php if ($function1 == "Chef de march�")  { echo 'selected'; } ?>>Chef de march�</option>
-							<option <?php if ($function1 == "Chef de vente r�gional")  { echo 'selected'; } ?>>Chef de vente r�gional</option>
+							<option <?php if ($function1 == "Chef de marché")  { echo 'selected'; } ?>>Chef de marché</option>
+							<option <?php if ($function1 == "Chef de vente régional")  { echo 'selected'; } ?>>Chef de vente régional</option>
 							<option <?php if ($function1 == "Chef de vente")  { echo 'selected'; } ?>>Chef de vente</option>
 							<option <?php if ($function1 == "Technicien PC")  { echo 'selected'; } ?>>Technicien PC</option>
 							<option <?php if ($function1 == "Personnes en formation")  { echo 'selected'; } ?>>Personnes en formation</option>
@@ -137,9 +137,9 @@ else
 						  <td align="right">Ressort:</td>
 						   <td>
 							<select name="sparte" type="text" size="1" maxlength="36" value="<?php echo $sparte;?>">
-								<option <?php if ($sparte == "�lectrom�nager")  { echo 'selected'; } ?>>�lectrom�nager</option>
+								<option <?php if ($sparte == "électroménager")  { echo 'selected'; } ?>>électroménager</option>
 								<option <?php if ($sparte == "multimedia")  { echo 'selected'; } ?>>multimedia</option>
-								<option <?php if ($sparte == "�lectrom�nager/multimedia")  { echo 'selected'; } ?>>�lectrom�nager/multimedia</option>
+								<option <?php if ($sparte == "électroménager/multimedia")  { echo 'selected'; } ?>>électroménager/multimedia</option>
 								<option <?php if ($sparte == "photo")  { echo 'selected'; } ?>>photo</option>
 							</select>
 						  </td>
@@ -159,7 +159,7 @@ else
 							<?php echo $mailEnding; ?>
 						</td>
 						<tr>
-						  <td align="right">T�l�phone:</td>
+						  <td align="right">Téléphone:</td>
 						  <td><input name="phone" type="text" size="30" maxlength="36" value="<?php echo $phone;?>"><?php echo $Errmessage; ?></td>
 						</tr>
 						<tr>
@@ -168,7 +168,7 @@ else
 						</tr>
 						
 						<tr>
-						  <td align="right">jour cong�:</td>
+						  <td align="right">jour congé:</td>
 						  <td><input name="freierTag" type="text" size="30" maxlength="36" value="<?php echo $freierTag;?>"></td>
 						</tr>
 						<tr>
@@ -202,7 +202,7 @@ else
 				<div class="view-formularVerkauf-vorschau-function2"><?php echo $function2; ?></div>
 				<div class="view-formularVerkauf-vorschau-adressZeile" <?php if((strlen($street) + strlen($zip)) > 32) { echo 'style=font-size:9px;'; } ?>><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
 				<div class="view-formularVerkauf-vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
-				<div class="view-formularVerkauf-vorschau-nummern"><?php if ($phone != "") { echo ' Téléphone '; echo $phone; } if ($fax != "") {  echo ' &middot; Fax '; echo $fax; } ?></div>
+				<div class="view-formularVerkauf-vorschau-nummern"><?php if ($phone != "") { echo ' Téléphone '; echo $phone; } if ($fax != "") {  echo ' · Fax '; echo $fax; } ?></div>
 				<div class="view-formularVerkauf-vorschau-freierWochentag"><?php if ($freierTag != "") { echo 'jour congé: '; echo $freierTag; } ?></div>
 			</div>
 			<div class="vorschaufenster-rueckseite">

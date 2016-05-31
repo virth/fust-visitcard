@@ -105,16 +105,16 @@ if (strpos($mailF2 ,'@') != false)
 				'Dipl.Ing.Fust AG ',  //3
 				$street,  //4
 				$zip,  //5
-				$mail.'@fust.ch'.' � '.' Telefon '.$phone.' � Fax '.$fax, //6
+				$mail.'@fust.ch'.' é '.' Telefon '.$phone.' · fax '.$fax, //6
 				'Dipl.Ing.Fust AG ', //7
 				$streetF2, //8
 				$zipF2, //9
-				$mailF2.'@fust.ch'.' � '.' Telefon '.$phoneF2.' � Fax '.$faxF2 //10
+				$mailF2.'@fust.ch'.' é '.' Telefon '.$phoneF2.' · fax '.$faxF2 //10
 			), 
 			$filialnr, 
 			$anz
 		);
-		$message = 'Besten Dank f�r Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
+		$message = 'Besten Dank für Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
 	}
 		
 		
@@ -124,7 +124,7 @@ if (strpos($mailF2 ,'@') != false)
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("Sind Sie sicher dass Sie bestellen m�chten? Haben Sie alle Texte nochmals �berpr�ft?");
+var agree=confirm("Sind Sie sicher dass Sie bestellen möchten? Haben Sie alle Texte nochmals überprüft?");
 if (agree)
 	return true ;
 else
@@ -141,7 +141,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(wird nur f�r interne Zwecke ben�tigt)
+									(wird nur für interne Zwecke benötigt)
 								</span>
 							</td>
 						</tr>
@@ -270,7 +270,7 @@ else
 						{ 
 							echo $mail; 
 							echo $mailEnding; 
-							echo " &middot;"; 
+							echo " ·"; 
 						}
 						if ($phone != "") 
 						{ 
@@ -279,7 +279,7 @@ else
 						} 
 						if ($fax != "") 
 						{  
-							echo ' &middot; Fax '; 
+							echo ' · Fax '; 
 							echo $fax; 
 						} 
 					?>
@@ -291,7 +291,7 @@ else
 						{ 
 							echo $mailF2; 
 							echo $mailEnding; 
-							echo " &middot;"; 
+							echo " ·"; 
 						}
 						
 						if ($phoneF2 != "") 
@@ -302,7 +302,7 @@ else
 						
 						if ($faxF2 != "") 
 						{  
-							echo ' &middot; Fax '; 
+							echo ' · Fax '; 
 							echo $faxF2; 
 						} 
 					?>

@@ -28,7 +28,7 @@
 			</td>
 			
 			<td class="auswahl">
-				<h4>Küchen und Badezimmer</h4>
+				<h4>K&uuml;chen und Badezimmer</h4>
 				<form action="index.php?site=formularKueBa&language=d" method="post">
 	      				<input name="typ" type="hidden" value="5">
 	   				<input type="image" src="resource/template/vorlagen/KueBa/VK_dt_KueBa_VS_voll.jpg" height="170px">

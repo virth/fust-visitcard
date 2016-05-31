@@ -53,30 +53,30 @@
 		$mobile = $pdfGenerator->customspecialchars(trim($_POST['mobile']));
 	    $array = str_split($mobile);
 		if (count($array) < 13 && count($array) > 1)
-			$Errmessage = "<script type='text/javascript'>alert ('Il nummero di mobil non � corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
+			$Errmessage = "<script type='text/javascript'>alert ('Il nummero di mobil non é corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
 		else if (count($array) > 1)
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<script type='text/javascript'>alert ('Il nummero di mobil non � corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
+				$Errmessage = "<script type='text/javascript'>alert ('Il nummero di mobil non é corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
 	}
 	if (isset($_POST['phone']))
 	{
 		$phone = $pdfGenerator->customspecialchars(trim($_POST['phone']));
 	    $array = str_split($phone);
 		if (count($array) < 13)
-			$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non � corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+			$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non é corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non � corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+				$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non é corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 	}
 	if (isset($_POST['fax']))
 	{
 		$fax = $pdfGenerator->customspecialchars(trim($_POST['fax']));
 	    $array = str_split($fax);
 		if (count($array) < 13 && count($array) > 1)
-			$Errmessage = "<script type='text/javascript'>alert ('Il nummero di fax non � corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
+			$Errmessage = "<script type='text/javascript'>alert ('Il nummero di fax non é corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
 		else if (count($array) > 1)
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<script type='text/javascript'>alert ('Il nummero di fax non � corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
+				$Errmessage = "<script type='text/javascript'>alert ('Il nummero di fax non é corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78');</script>";
 	}
 	
 	if (isset($_POST['order']))
@@ -145,7 +145,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>"> 
 								<span class="tabellenKommentar" >
-									 (per scopi interni � necessario)
+									 (per scopi interni é necessario)
 								</span>
 							</td>
 						</tr>
@@ -217,7 +217,7 @@ else
 						<tr>
 							<td align="right">Foto Upload (max 10mb):</td>		
 							<td><input name="thefile" type="file" size="30" maxlength="36"></td>
-							<td>(Abito scuro, cravatta. L�immagine deve essere prima verificata dall� RVL.)</td>
+							<td>(Abito scuro, cravatta. Léimmagine deve essere prima verificata dallé RVL.)</td>
 						</tr>
 						<tr>
 							<td align="right">ordine:</td>

@@ -53,10 +53,10 @@
 		$phone = $pdfGenerator->customspecialchars(trim($_POST['phone']));
 	    $array = str_split($phone);
 		if (count($array) < 13)
-			$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non � corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+			$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non é corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non � corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+				$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non é corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 	}
 	if (isset($_POST['fax']))
 		$fax = $pdfGenerator->customspecialchars(trim($_POST['fax']));		
@@ -70,7 +70,7 @@
 		$freierWochentag = "";
 		if ($freierTag != "")
 			$freierWochentag = "giornata liebere: ".$freierTag;
-		$filename = $pdfGenerator->generatePdf("verkauf", "I", array($vorname.' '.$name, $function1.' '.$sparte, $function2, 'Ing. dipl. Fust SA ', $street, $zip, $mail.'@fust.ch', 'Telefono '.$phone.' � Fax '.$fax, $freierWochentag), $filialnr, $anz);
+		$filename = $pdfGenerator->generatePdf("verkauf", "I", array($vorname.' '.$name, $function1.' '.$sparte, $function2, 'Ing. dipl. Fust SA ', $street, $zip, $mail.'@fust.ch', 'Telefono '.$phone.' · fax '.$fax, $freierWochentag), $filialnr, $anz);
 		$message = 'Grazie per la vostra ordinazione <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">Visionare PDF<br />  <a href="index.php?site=cardSelection&language=i">Ordinare nuova carta da visita</a>';
 	}
 
@@ -97,7 +97,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10" value="<?php echo $filialnr;?>">
 								<span class="tabellenKommentar" >
-									 (per scopi interni � necessario)
+									 (per scopi interni é necessario)
 								</span>
 							</td>
 						</tr>
@@ -177,7 +177,7 @@ else
 							</td>
 						</tr>
 						<tr>
-							<td align="right">Quantit�:</td>
+							<td align="right">Quantité:</td>
 							<td>
 								<select name="anz" size="1">
 									<option>300</option>
@@ -196,7 +196,7 @@ else
 				<div class="view-formularVerkauf-vorschau-function2"><?php echo $function2; ?></div>
 				<div class="view-formularVerkauf-vorschau-adressZeile"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
 				<div class="view-formularVerkauf-vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
-				<div class="view-formularVerkauf-vorschau-nummern"><?php if ($phone != "") { echo ' Telefono '; echo $phone; } if ($fax != "") {  echo ' &middot; Fax '; echo $fax; } ?></div>
+				<div class="view-formularVerkauf-vorschau-nummern"><?php if ($phone != "") { echo ' Telefono '; echo $phone; } if ($fax != "") {  echo ' · Fax '; echo $fax; } ?></div>
 				<div class="view-formularVerkauf-vorschau-freierWochentag"><?php if ($freierTag != "") { echo 'giornata libera: '; echo $freierTag; } ?></div>
 			</div>
 			<div class="vorschaufenster-rueckseite">

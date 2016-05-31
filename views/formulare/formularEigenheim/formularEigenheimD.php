@@ -75,12 +75,12 @@
 				$street, //4
 				$zip, //5
 				$mail.'@fust.ch', //6
-				'Mobile '.$mobile.' � Telefon '.$phone.' � Fax '.$fax //7
+				'Mobile '.$mobile.' é Telefon '.$phone.' · fax '.$fax //7
 			), 
 			$filialnr, 
 			$anz
 		);
-		$message = 'Besten Dank f�r Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
+		$message = 'Besten Dank für Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
 	}
 
 		
@@ -91,7 +91,7 @@
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("Sind Sie sicher dass Sie bestellen m�chten? Haben Sie alle Texte nochmals �berpr�ft?");
+var agree=confirm("Sind Sie sicher dass Sie bestellen möchten? Haben Sie alle Texte nochmals überprüft?");
 if (agree)
 	return true ;
 else
@@ -107,7 +107,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(wird nur f�r interne Zwecke ben�tigt)
+									(wird nur für interne Zwecke benötigt)
 								</span>
 							</td>
 						</tr>
@@ -185,7 +185,7 @@ else
 				<div class="view-formularAdmin-vorschau-function2"><?php echo $function2; ?></div>
 				<div class="view-formularAdmin-vorschau-adressZeile"><?php echo 'Dipl.Ing.Fust AG <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
 				<div class="view-formularAdmin-vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
-				<div class="view-formularAdmin-vorschau-nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' &middot; '; } if ($phone != "") { echo ' Telefon '; echo $phone; } if ($fax != "") {  echo ' &middot; Fax '; echo $fax; } ?></div>
+				<div class="view-formularAdmin-vorschau-nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' · '; } if ($phone != "") { echo ' Telefon '; echo $phone; } if ($fax != "") {  echo ' · Fax '; echo $fax; } ?></div>
 			</div>
 		</div>
 	</body>

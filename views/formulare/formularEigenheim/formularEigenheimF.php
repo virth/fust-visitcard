@@ -43,7 +43,7 @@
 {
 		$mail = $pdfGenerator->customspecialchars(trim($_POST['mail']));
 	if (strpos($mail,'@') != false)
-	$Errmessage =	 "<script type='text/javascript'>alert ('E-mail doit �tre entr� sans @fust.ch');</script>";
+	$Errmessage =	 "<script type='text/javascript'>alert ('E-mail doit étre entré sans @fust.ch');</script>";
 }
 	if (isset($_POST['mobile'])) 
 		$mobile = $pdfGenerator->customspecialchars(trim($_POST['mobile']));
@@ -52,10 +52,10 @@
 		$phone = $pdfGenerator->customspecialchars(trim($_POST['phone']));
 	    $array = str_split($phone);
 		if (count($array) < 13)
-			$Errmessage = "<span class='red' style=\"font-size:10px;\">Le n� de t�l�phone n�a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
+			$Errmessage = "<span class='red' style=\"font-size:10px;\">Le né de téléphone néa pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<span class='red' style=\"font-size:10px;\">Le n� de t�l�phone n�a pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
+				$Errmessage = "<span class='red' style=\"font-size:10px;\">Le né de téléphone néa pas le format correct. Veuillez le corriger comme suit: 071 123 45 78</span>";
 	}
 	if (isset($_POST['fax']))
 		$fax = $pdfGenerator->customspecialchars(trim($_POST['fax']));
@@ -75,7 +75,7 @@
 				$street, //4
 				$zip, //5
 				$mail.'@fust.ch', //6
-				'Mobile '.$mobile.' � T�l�phone '.$phone.' � Fax '.$fax //7
+				'Mobile '.$mobile.' é Téléphone '.$phone.' · fax '.$fax //7
 			), 
 			$filialnr, 
 			$anz
@@ -89,7 +89,7 @@
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("�tes-vous sure, que vous voulez comander? Avez vous controll� tous les textes?");
+var agree=confirm("étes-vous sure, que vous voulez comander? Avez vous controllé tous les textes?");
 if (agree)
 	return true ;
 else
@@ -104,7 +104,7 @@ else
 				<form action="index.php?site=formularEigenheim&language=f" method="post">
 					<table class="formularTabelle">	
 						<tr>
-						  <td align="right">Num�ro filiale.:</td>
+						  <td align="right">Numéro filiale.:</td>
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>"> 
 								<span class="tabellenKommentar" >
@@ -117,7 +117,7 @@ else
 						  <td><input name="name" type="text" size="30" maxlength="20" value="<?php echo $name;?>"></td>
 						</tr>
 						<tr>
-						  <td align="right">Pr�nom:</td>
+						  <td align="right">Prénom:</td>
 						  <td><input name="vorname" type="text" size="30" maxlength="20" value="<?php echo $vorname;?>"></td>
 						</tr>
 						<tr>
@@ -147,7 +147,7 @@ else
 						  <td><input name="mobile" type="text" size="30" maxlength="36" value="<?php echo $mobile;?>"></td>
 						</tr>
 						<tr>
-						  <td align="right">T�l�phone:</td>
+						  <td align="right">Téléphone:</td>
 						  <td><input name="phone" type="text" size="30" maxlength="36" value="<?php echo $phone;?>"><?php echo $Errmessage; ?></td>
 						</tr>
 						<tr>
@@ -186,7 +186,7 @@ else
 				<div class="view-formularAdmin-vorschau-function2"><?php echo $function2; ?></div>
 				<div class="view-formularAdmin-vorschau-adressZeile"><?php echo 'Ing. dipl. Fust SA <span class="orange">|</span> '; echo $street; echo ' <span class="orange">|</span> '; echo $zip; ?></div>
 				<div class="view-formularAdmin-vorschau-mail"><?php echo $mail; echo $mailEnding; ?></div>
-				<div class="view-formularAdmin-vorschau-nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' &middot; '; } if ($phone != "") { echo ' Téléphone '; echo $phone; } if ($fax != "") {  echo ' &middot; Fax '; echo $fax; } ?></div>
+				<div class="view-formularAdmin-vorschau-nummern"><?php if ($mobile != "") { echo 'Mobile '; echo $mobile; echo ' · '; } if ($phone != "") { echo ' Téléphone '; echo $phone; } if ($fax != "") {  echo ' · Fax '; echo $fax; } ?></div>
 			</div>
 		</div>
 	</body>

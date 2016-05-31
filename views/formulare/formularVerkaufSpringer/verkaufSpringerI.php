@@ -59,10 +59,10 @@
 		$phone = $pdfGenerator->customspecialchars(trim($_POST['phone']));
 	    $array = str_split($phone);
 		if (count($array) < 13)
-			$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non � corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+			$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non é corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non � corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+				$Errmessage = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non é corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 	}
 	if (isset($_POST['fax']))
 		$fax = $pdfGenerator->customspecialchars(trim($_POST['fax']));
@@ -83,10 +83,10 @@ if (strpos($mailF2 ,'@') != false)
 		$phoneF2 = $pdfGenerator->customspecialchars(trim($_POST['phoneF2']));
 	    $array = str_split($phoneF2);
 		if (count($array) < 13)
-			$ErrmessageF2 = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non � corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+			$ErrmessageF2 = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non é corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 		else
 			if ($array[3] != " " || $array[7] != " " || $array[10] != " ")
-				$ErrmessageF2 = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non � corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
+				$ErrmessageF2 = "<span class='red' style=\"font-size:10px;\">Il nummero di telefono non é corretto. V prego di formatare il nummero nel mode seguente: 071 123 45 78</span>";
 	}
 	if (isset($_POST['faxF2']))
 		$faxF2 = $pdfGenerator->customspecialchars(trim($_POST['faxF2']));	
@@ -105,11 +105,11 @@ if (strpos($mailF2 ,'@') != false)
 				'Ing. dipl. Fust SA ',  //3
 				$street,  //4
 				$zip,  //5
-				$mail.'@fust.ch'.' � '.' Telefono '.$phone.' � Fax '.$fax, //6
+				$mail.'@fust.ch'.' é '.' Telefono '.$phone.' · fax '.$fax, //6
 				'Ing. dipl. Fust SA ', //7
 				$streetF2, //8
 				$zipF2, //9
-				$mailF2.'@fust.ch'.' � '.' Telefono '.$phoneF2.' � Fax '.$faxF2 //10
+				$mailF2.'@fust.ch'.' é '.' Telefono '.$phoneF2.' · fax '.$faxF2 //10
 			), 
 			$filialnr, 
 			$anz
@@ -142,7 +142,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10" value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									 (per scopi interni � necessario)
+									 (per scopi interni é necessario)
 								</span>
 							</td>
 						</tr>
@@ -269,7 +269,7 @@ else
 					{ 
 						echo $mail; 
 						echo $mailEnding; 
-						echo " &middot;"; 
+						echo " ·"; 
 					}
 					if ($phone != "") 
 					{ 
@@ -278,7 +278,7 @@ else
 					} 
 					if ($fax != "") 
 					{  
-						echo ' &middot; Fax '; 
+						echo ' · Fax '; 
 						echo $fax; 
 					} 
 					?>
