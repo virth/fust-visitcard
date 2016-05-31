@@ -30,9 +30,13 @@ class pdfgenerator
 		$pdf-> AddFont('FrutigerLTStd-Roman');
 		$pdf-> SetAutoPageBreak(false);
 		$pdf-> addPage('mm', $size);
-
-		for ($i = 0; $i < sizeof($data); $i++)
+		
+		$filename = $data[0];
+		for ($i = 0; $i < sizeof($data); $i++) {
+			
 			$data[$i] = htmlspecialchars_decode($data[$i]);
+			$data[$i] = utf8_decode($data[$i]);
+		}
 
 
 		if ($type == "verkauf")
@@ -51,7 +55,7 @@ class pdfgenerator
 
 
 		//PDF speichern
-		$fname = $this->writePDF($pdf, $data[0], $filialnr, $menge, $type);
+		$fname = $this->writePDF($pdf, $filename, $filialnr, $menge, $type);
 
 		//Lese Empf�nger Adressen und schreibe E-Mails
 		if ($type != "kueBa")
@@ -61,7 +65,7 @@ class pdfgenerator
 
 	function customspecialchars($text)
 	{
-		return htmlspecialchars($text,ENT_COMPAT,'ISO-8859-1', true);
+		return htmlspecialchars($text,ENT_COMPAT,'UTF-8', true);
 	}
 
 
@@ -70,9 +74,9 @@ class pdfgenerator
 		$now = date("H-i-s");//, strtotime(date('r')));
 		$date = date("Y-m-d");
 		$filename = strtolower($date.'_'.$typ.'_'.$name.'_'.$now."_".$menge.".pdf");
-		$filename = str_replace("�", "oe", $filename);
-		$filename = str_replace("�", "ae", $filename);
-		$filename = str_replace("�", "ue", $filename);
+		$filename = str_replace("ö", "oe", $filename);
+		$filename = str_replace("ä", "ae", $filename);
+		$filename = str_replace("ü", "ue", $filename);
 		$filename = str_replace(" ", "_", $filename);
 		$filename = urlencode ($filename);
 
@@ -90,7 +94,7 @@ class pdfgenerator
 			$absendername = "FUST Online Portal";
 			$absendermail = "Fust.Onlineportal@e-druck.ch";
 			$betreff = "Bestellung Fust Visitenkarte";
-			$text = "Guten Tag \n\n Soeben ist eine Bestellung f�r Filial Nr $filialnr eingegangen. \n\nBestellte Visitenkarte: $menge \n\n PDF: http://visitcard.ch/vcards/".urlencode($fname);;
+			$text = "Guten Tag \n\n Soeben ist eine Bestellung für Filial Nr $filialnr eingegangen. \n\nBestellte Visitenkarte: $menge \n\n PDF: http://visitcard.ch/vcards/".urlencode($fname);;
 
 			mail($entrysArray[$i], $betreff, $text, "From: $absendername <$absendermail>");
 		}
@@ -182,8 +186,6 @@ class pdfgenerator
 		$pdf-> SetFont('FrutigerLTStd-ExtraBlackCn','',14);
 		$pdf-> SetXY(0, 24.8 - $add);
         $pdf-> Cell(90,5,$dataArray[0],0,1,"C");
-
-
 
 		$anzahl = $pdf->setSourceFile($rueckseite);
 		$pdf-> addPage('mm', $size);
