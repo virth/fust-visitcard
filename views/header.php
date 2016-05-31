@@ -1,12 +1,11 @@
 <?php
 	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
-	header("Content-Type: text/html; charset=iso-8859-1");
+	
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8"/> 		
 		 <link href="../style/style.css" rel="stylesheet" type="text/css" />
 		 <script src="http://code.jquery.com/jquery-latest.js"></script>
 		<title>E-Druck Visitenkarten</title>
