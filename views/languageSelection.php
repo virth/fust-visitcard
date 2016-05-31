@@ -8,13 +8,13 @@
 	include_once 'views/header.php';	
 ?>
 	
-	<p>Bitte w&auml;hlen Sie die gewünschte Sprache.</p>
-	<p>Choisissez la langue désirée pour les commandes on-line, s.v.p.</p>
+	<p>Bitte w&auml;hlen Sie die gewÃ¼nschte Sprache.</p>
+	<p>Choisissez la langue dÃ©sirÃ©e pour les commandes on-line, s.v.p.</p>
 	<p>Sceglie la lingua desiderata per le ordinazioni on-line, per favore.</p>
 	<br />
 	<ul>
 		<li class="view-sprachAuswahl-link"><a href="index.php?site=cardSelection&language=d">Deutsch</a></li>
-		<li class="view-sprachAuswahl-link"><a href="index.php?site=cardSelection&language=f">Français</a></li>
+		<li class="view-sprachAuswahl-link"><a href="index.php?site=cardSelection&language=f">FranÃ§ais</a></li>
 		<li class="view-sprachAuswahl-link"><a href="index.php?site=cardSelection&language=i">Italiano</a></li>	
 	</ul>
 	
