@@ -105,11 +105,11 @@ if (strpos($mailF2 ,'@') != false)
 				'Dipl.Ing.Fust AG ',  //3
 				$street,  //4
 				$zip,  //5
-				$mail.'@fust.ch'.' · '.' Telefon '.$phone.' · Fax '.$fax, //6
+				$mail.'@fust.ch'.' ·'.' Telefon'.$phone.' · Fax '.$fax, //6
 				'Dipl.Ing.Fust AG ', //7
 				$streetF2, //8
 				$zipF2, //9
-				$mailF2.'@fust.ch'.' · '.' Telefon '.$phoneF2.' · Fax '.$faxF2 //10
+				$mailF2.'@fust.ch'.'· '.' Telefon'.$phoneF2.' · Fax '.$faxF2 //10
 			), 
 			$filialnr, 
 			$anz
