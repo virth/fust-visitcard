@@ -109,7 +109,7 @@ if (strpos($mailF2 ,'@') != false)
 				'Dipl.Ing.Fust AG ', //7
 				$streetF2, //8
 				$zipF2, //9
-				$mailF2.'@fust.ch'.'· '.' Telefon'.$phoneF2.' · Fax '.$faxF2 //10
+				$mailF2.'@fust.ch'.' ·'.' Telefon'.$phoneF2.' · Fax '.$faxF2 //10
 			), 
 			$filialnr, 
 			$anz
