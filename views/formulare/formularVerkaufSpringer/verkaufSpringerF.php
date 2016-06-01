@@ -107,11 +107,11 @@
 				'Ing. dipl. Fust SA ',  //3
 				$street,  //4
 				$zip,  //5
-				$mail.'@fust.ch'.' é '.'Téléphone '.$phone.' · fax '.$fax, //6
+				$mail.'@fust.ch'.' · '.'Téléphone '.$phone.' · Fax '.$fax, //6
 				'Ing. dipl. Fust SA ', //7
 				$streetF2, //8
 				$zipF2, //9
-				$mailF2.'@fust.ch'.' é '.'Téléphone '.$phoneF2.' · fax '.$faxF2 //10
+				$mailF2.'@fust.ch'.' · '.'Téléphone '.$phoneF2.' · Fax '.$faxF2 //10
 			), 
 			$filialnr, 
 			$anz
@@ -160,7 +160,7 @@ else
 						  <td align="right">Fonction ligne 1:</td>
 						  <td>
 							<select name="function1" type="text" size="1" maxlength="36" value="<?php echo $function1;?>">
-								<option <?php if ($function1 == "Conseillére de vente")  { echo 'selected'; } ?>>Conseillére de vente</option>
+								<option <?php if ($function1 == "Conseillère de vente")  { echo 'selected'; } ?>>Conseillère de vente</option>
 								<option <?php if ($function1 == "Conseiller de vente")  { echo 'selected'; } ?>>Conseiller de vente</option>
 								<option <?php if ($function1 == "Chef du département")  { echo 'selected'; } ?>>Chef du département</option>
 								<option <?php if ($function1 == "Chef de succursale")  { echo 'selected'; } ?>>Chef de succursale</option>

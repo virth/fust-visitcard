@@ -75,7 +75,7 @@
 				$street, //4
 				$zip, //5
 				$mail.'@fust.ch', //6
-				'Mobile '.$mobile.' é Telefono '.$phone.' · fax '.$fax //7
+				'Mobile '.$mobile.' · Telefono '.$phone.' · Fax '.$fax //7
 			), 
 			$filialnr, 
 			$anz
@@ -165,7 +165,7 @@ else
 							</td>
 						</tr>
 						<tr>
-							<td align="right">Quantité:</td>
+							<td align="right">quantità:</td>
 							<td>
 								<select name="anz" size="1">
 	      							<option>100</option>

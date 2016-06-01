@@ -74,7 +74,7 @@ if (isset($_POST['order']) && $Errmessage == "")
 	$freierWochentag = "";
 	if ($freierTag != "")
 		$freierWochentag = "Freier Wochentag: ".$freierTag;
-	$filename = $filename = $pdfGenerator->generatePdf("verkauf", "D", array($vorname.' '.$name, $function1.' '.$sparte, $function2, 'Dipl.Ing.Fust AG ', $street, $zip, $mail.'@fust.ch', 'Telefon '.$phone.'  · Fax '.$fax, $freierWochentag), $filialnr, $anz);
+	$filename = $filename = $pdfGenerator->generatePdf("verkauf", "D", array($vorname.' '.$name, $function1.' '.$sparte, $function2, 'Dipl.Ing.Fust AG ', $street, $zip, $mail.'@fust.ch', 'Telefon '.$phone.' · Fax '.$fax, $freierWochentag), $filialnr, $anz);
 	$message = 'Besten Dank für Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
 }
 

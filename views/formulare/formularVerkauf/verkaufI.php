@@ -70,7 +70,7 @@
 		$freierWochentag = "";
 		if ($freierTag != "")
 			$freierWochentag = "giornata liebere: ".$freierTag;
-		$filename = $pdfGenerator->generatePdf("verkauf", "I", array($vorname.' '.$name, $function1.' '.$sparte, $function2, 'Ing. dipl. Fust SA ', $street, $zip, $mail.'@fust.ch', 'Telefono '.$phone.' · fax '.$fax, $freierWochentag), $filialnr, $anz);
+		$filename = $pdfGenerator->generatePdf("verkauf", "I", array($vorname.' '.$name, $function1.' '.$sparte, $function2, 'Ing. dipl. Fust SA ', $street, $zip, $mail.'@fust.ch', 'Telefono '.$phone.' · Fax '.$fax, $freierWochentag), $filialnr, $anz);
 		$message = 'Grazie per la vostra ordinazione <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">Visionare PDF<br />  <a href="index.php?site=cardSelection&language=i">Ordinare nuova carta da visita</a>';
 	}
 

@@ -75,7 +75,7 @@
 				$street, //4
 				$zip, //5
 				$mail.'@fust.ch', //6
-				'Mobile '.$mobile.' é Téléphone '.$phone.' · fax '.$fax //7
+				'Mobile '.$mobile.' · Téléphone '.$phone.' · Fax '.$fax //7
 			), 
 			$filialnr, 
 			$anz

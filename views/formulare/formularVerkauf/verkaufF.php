@@ -117,7 +117,7 @@ else
 						  <td align="right">Fonction 1:</td>
 						  <td>
 							<select name="function1" type="text" size="1" maxlength="35" value="<?php echo $function1;?>">
-							<option <?php if ($function1 == "Conseillére de vente")  { echo 'selected'; } ?>>Conseillére de vente</option>
+							<option <?php if ($function1 == "Conseillère de vente")  { echo 'selected'; } ?>>Conseillère de vente</option>
 							<option <?php if ($function1 == "Conseiller de vente")  { echo 'selected'; } ?>>Conseiller de vente</option>
 							<option <?php if ($function1 == "Chef du département")  { echo 'selected'; } ?>>Chef du département</option>
 							<option <?php if ($function1 == "Chef de succursale")  { echo 'selected'; } ?>>Chef de succursale</option>

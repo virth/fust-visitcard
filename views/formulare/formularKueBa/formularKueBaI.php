@@ -202,7 +202,7 @@ else
 						</tr>
 						<tr>
 							<td style="padding-top:10;">
-								<input type="submit" value="verduta" name="preview">
+								<input type="submit" value="veduta" name="preview">
 							</td>
 							<td>
 								<img src="./resource/loading.gif" height="25px" style="display:none;" id="loadingGif"/>
@@ -220,13 +220,13 @@ else
 							<td>(Abito scuro, cravatta. Léimmagine deve essere prima verificata dallé RVL.)</td>
 						</tr>
 						<tr>
-							<td align="right">ordine:</td>
+							<td align="right">quantità:</td>
 							<td>
 								<select name="anz" size="1">
 	      							<option>100</option>
 									<option>300</option>
 								</select>
-								<input type="submit" value=" commande " name="order"  onClick="return confirmSubmit()" <?php if($Errmessage != "") echo("disabled= 	\"disabled\""); ?>>
+								<input type="submit" value=" ordine " name="order"  onClick="return confirmSubmit()" <?php if($Errmessage != "") echo("disabled= 	\"disabled\""); ?>>
 							</td>
 						</tr>
 					</table>

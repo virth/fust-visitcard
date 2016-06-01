@@ -65,7 +65,7 @@ if (strpos($mail,'@') != false)
 	{
 		$m ="";
 		if ($mobile != "")
-			$m = "Mobile ".$mobile.' �';
+			$m = "Mobile ".$mobile.' ·';
 			
 		$filename = $pdfGenerator->generatePdf
 		(
@@ -85,7 +85,7 @@ if (strpos($mail,'@') != false)
 			$filialnr, 
 			$anz
 		);
-		$message = 'Besten Dank f�r Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
+		$message = 'Besten Dank für Ihre Bestellung! <br /> <a href="vcards/'.urlencode($filename).'" target="_blank">PDF ansehen<br />  <a href="index.php?site=cardSelection&language=d">Neue Visitenkarte erstellen</a>';
 	}
 		
 	include_once('views/header.php');
@@ -95,7 +95,7 @@ if (strpos($mail,'@') != false)
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var agree=confirm("Sind Sie sicher dass Sie bestellen möchten? Haben Sie alle Texte nochmals �berpr�ft?");
+var agree=confirm("Sind Sie sicher dass Sie bestellen möchten? Haben Sie alle Texte nochmals überprüft?");
 if (agree)
 	return true ;
 else
@@ -111,7 +111,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(wird nur f�r interne Zwecke ben�tigt)
+									(wird nur für interne Zwecke benötigt)
 								</span>
 							</td>
 						</tr>

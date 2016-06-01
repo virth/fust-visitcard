@@ -105,11 +105,11 @@ if (strpos($mailF2 ,'@') != false)
 				'Ing. dipl. Fust SA ',  //3
 				$street,  //4
 				$zip,  //5
-				$mail.'@fust.ch'.' é '.' Telefono '.$phone.' · fax '.$fax, //6
+				$mail.'@fust.ch'.' · '.' Telefono '.$phone.' · Fax '.$fax, //6
 				'Ing. dipl. Fust SA ', //7
 				$streetF2, //8
 				$zipF2, //9
-				$mailF2.'@fust.ch'.' é '.' Telefono '.$phoneF2.' · fax '.$faxF2 //10
+				$mailF2.'@fust.ch'.' · '.' Telefono '.$phoneF2.' · Fax '.$faxF2 //10
 			), 
 			$filialnr, 
 			$anz
@@ -234,7 +234,7 @@ else
 						</tr>		
 						<tr>
 							<td style="padding-top:10;">
-								<input type="submit" value="vue d'ensemble" name="preview">
+								<input type="submit" value="veduta" name="preview">
 							</td>
 						</tr>
 						<tr>
@@ -244,14 +244,14 @@ else
 							</td>
 						</tr>
 						<tr>
-							<td align="right">Nombre:</td>
+							<td align="right">quantità:</td>
 							<td>
 								<select name="anz" size="1">
 									<option>300</option>
 									<option>100</option>
 								</select>
 								<input type="hidden" name="typ" value="<?php echo $typ; ?>">
-								<input type="submit" value=" commande " name="order" onClick="return confirmSubmit()" <?php if($Errmessage != "" || $ErrmessageF2 != "") echo("disabled= 	\"disabled\""); ?>>
+								<input type="submit" value=" ordine " name="order" onClick="return confirmSubmit()" <?php if($Errmessage != "" || $ErrmessageF2 != "") echo("disabled= 	\"disabled\""); ?>>
 							</td>
 						</tr>
 					</table>

@@ -82,7 +82,7 @@ else
 						  <td>
 								<input name="filialnr" type="text" size="6" maxlength="10"  value="<?php echo $filialnr; ?>">
 								<span class="tabellenKommentar" >
-									(per scopi interni é necessario)
+									(pour usage interne)
 								</span>
 							</td>
 						</tr>
@@ -112,7 +112,7 @@ else
 						</tr>
 						<tr>
 							<td style="padding-top:10;">
-								<input type="submit" value="veduta" name="preview">
+								<input type="submit" value="vue d'esemble'" name="preview">
 							</td>
 						</tr>
 						<tr>
@@ -129,7 +129,7 @@ else
 									<option>300</option>
 								</select>
 								<input type="hidden" name="typ" value="<?php echo $typ; ?>">
-								<input type="submit" value=" ordine " name="order" onClick="return confirmSubmit()">
+								<input type="submit" value=" commande " name="order" onClick="return confirmSubmit()">
 							</td>
 						</tr>
 					</table>
