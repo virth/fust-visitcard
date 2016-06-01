@@ -170,7 +170,7 @@ else
 							</td>
 						</tr>
 						<tr>
-							<td align="right">Quantité:</td>
+							<td align="right">quantità:</td>
 							<td>
 								<select name="anz" size="1">
 	      							<option>100</option>

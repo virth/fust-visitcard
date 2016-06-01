@@ -112,7 +112,7 @@ else
 						</tr>
 						<tr>
 							<td style="padding-top:10;">
-								<input type="submit" value="vue d'esemble'" name="preview">
+								<input type="submit" value="vue d'esemble" name="preview">
 							</td>
 						</tr>
 						<tr>
