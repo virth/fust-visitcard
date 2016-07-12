@@ -158,13 +158,11 @@ else
 						  <td align="right">Funzione 1:</td>
 						  <td>
 							<select name="function1" type="text" size="1" maxlength="36" value="<?php echo $function1;?>">
-							<option <?php if ($function1 == "Consulente di vendita")  { echo 'selected'; } ?>>Consulente di vendita</option>
-							<option <?php if ($function1 == "Resp. di reparto")  { echo 'selected'; } ?>>Resp. di reparto</option>
-							<option <?php if ($function1 == "Resp. di filiale")  { echo 'selected'; } ?>>Resp. di filiale</option>
-							<option <?php if ($function1 == "Resp. vendita regionale")  { echo 'selected'; } ?>>Resp. vendita regionale</option>
-							<option <?php if ($function1 == "Resp. vendita Ticino")  { echo 'selected'; } ?>>Resp. vendita Ticino</option>
+							<option <?php if ($function1 == "Consulente di vendita")  { echo 'selected'; } ?>>Consulente di vendita</option>							
 							<option <?php if ($function1 == "Tecnico PC")  { echo 'selected'; } ?>>Tecnico PC</option>
 							<option <?php if ($function1 == "Apprendista")  { echo 'selected'; } ?>>Apprendista</option>
+							<option <?php if ($function1 == "Capofiliale")  { echo 'selected'; } ?>>Capofiliale</option>
+							<option <?php if ($function1 == "Vice Capofiliale")  { echo 'selected'; } ?>>Vice Capofiliale</option>
 							</select>
 						  </td>
 						</tr>

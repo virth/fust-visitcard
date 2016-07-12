@@ -118,14 +118,14 @@ else
 						  <td>
 							<select name="function1" type="text" size="1" maxlength="35" value="<?php echo $function1;?>">
 							<option <?php if ($function1 == "Conseillère de vente")  { echo 'selected'; } ?>>Conseillère de vente</option>
-							<option <?php if ($function1 == "Conseiller de vente")  { echo 'selected'; } ?>>Conseiller de vente</option>
-							<option <?php if ($function1 == "Chef du département")  { echo 'selected'; } ?>>Chef du département</option>
-							<option <?php if ($function1 == "Chef de succursale")  { echo 'selected'; } ?>>Chef de succursale</option>
-							<option <?php if ($function1 == "Chef de marché")  { echo 'selected'; } ?>>Chef de marché</option>
-							<option <?php if ($function1 == "Chef de vente régional")  { echo 'selected'; } ?>>Chef de vente régional</option>
-							<option <?php if ($function1 == "Chef de vente")  { echo 'selected'; } ?>>Chef de vente</option>
+							<option <?php if ($function1 == "Conseiller de vente")  { echo 'selected'; } ?>>Conseiller de vente</option>							
+							<option <?php if ($function1 == "Chef de marché")  { echo 'selected'; } ?>>Chef de marché</option>							
 							<option <?php if ($function1 == "Technicien PC")  { echo 'selected'; } ?>>Technicien PC</option>
-							<option <?php if ($function1 == "Personnes en formation")  { echo 'selected'; } ?>>Personnes en formation</option>
+							<option <?php if ($function1 == "Chef de filiale")  { echo 'selected'; } ?>>Chef de filiale</option>
+							<option <?php if ($function1 == "Adj. Chef de filiale")  { echo 'selected'; } ?>>Adj. Chef de filiale</option>
+							<option <?php if ($function1 == "Adj. Chef de marché")  { echo 'selected'; } ?>>Adj. Chef de marché</option>
+							<option <?php if ($function1 == "Apprenti")  { echo 'selected'; } ?>>Apprenti</option>
+							<option <?php if ($function1 == "Apprentie")  { echo 'selected'; } ?>>Apprentie</option>						
 							</select>
 						  </td>
 						</tr>

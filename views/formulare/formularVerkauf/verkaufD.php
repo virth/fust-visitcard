@@ -121,8 +121,9 @@ else
 							<select name="function1" type="text" size="1" maxlength="36" value="<?php echo $function1;?>">
 							<option <?php if ($function1 == "Verkaufsberater")  { echo 'selected'; } ?>>Verkaufsberater</option>
 							<option <?php if ($function1 == "Verkaufsberaterin")  { echo 'selected'; } ?>>Verkaufsberaterin</option>
-							<option <?php if ($function1 == "Abteilungsleiter")  { echo 'selected'; } ?>>Abteilungsleiter</option>
-							<option <?php if ($function1 == "Abteilungsleiterin")  { echo 'selected'; } ?>>Abteilungsleiterin</option>
+							<option <?php if ($function1 == "Marktleiter")  { echo 'selected'; } ?>>Marktleiter</option>
+							<option <?php if ($function1 == "Stv. Filialleiter")  { echo 'selected'; } ?>>Stv. Filialleiter</option>
+							<option <?php if ($function1 == "Stv. Filialleiterin")  { echo 'selected'; } ?>>Stv. Filialleiterin</option>
 							<option <?php if ($function1 == "Filialleiter")  { echo 'selected'; } ?>>Filialleiter</option>
 							<option <?php if ($function1 == "Filialleiterin")  { echo 'selected'; } ?>>Filialleiterin</option>
 							<option <?php if ($function1 == "PC-Techniker")  { echo 'selected'; } ?>>PC-Techniker</option>
