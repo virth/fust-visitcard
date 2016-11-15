@@ -160,6 +160,9 @@ else
 							<option <?php if ($function1 == "Verkaufsberater")  { echo 'selected'; } ?>>Verkaufsberater</option>
 							<option <?php if ($function1 == "Verkaufsberaterin")  { echo 'selected'; } ?>>Verkaufsberaterin</option>
 							<option <?php if ($function1 == "Marktleiter")  { echo 'selected'; } ?>>Marktleiter</option>
+							<option <?php if ($function1 == "Marktleiterin")  { echo 'selected'; } ?>>Marktleiterin</option>
+							<option <?php if ($function1 == "Stv. Marktleiter")  { echo 'selected'; } ?>>Stv. Marktleiter</option>
+							<option <?php if ($function1 == "Stv. Marktleiterin")  { echo 'selected'; } ?>>Stv. Marktleiterin</option>
 							<option <?php if ($function1 == "Stv. Filialleiter")  { echo 'selected'; } ?>>Stv. Filialleiter</option>
 							<option <?php if ($function1 == "Stv. Filialleiterin")  { echo 'selected'; } ?>>Stv. Filialleiterin</option>
 							<option <?php if ($function1 == "Filialleiter")  { echo 'selected'; } ?>>Filialleiter</option>
